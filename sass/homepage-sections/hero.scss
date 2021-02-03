@@ -1,0 +1,211 @@
+.hero {
+    height: 100%;
+    max-height: 95vh;
+    // background-color: var(--background-color-darkest);
+    background-image: linear-gradient(135deg, #19181a, #5a595e);
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: repeat(
+      12,
+      [col-start] minmax(min-content, 16rem) [col-end]
+    );
+    overflow: hidden;
+  }
+  
+  .hero__sidebar {
+    grid-column: col-start 1 / col-end 3;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    z-index: 2;
+    box-shadow: 0 3px 103px 20px #252429;
+  
+    &__logo {
+      height: 70%;
+    }
+    &__logo--logo {
+      font-family: var(--text-source-sans);
+      font-size: 5.4rem;
+      color: white;
+      font-weight: 600;
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+    &__logo--subtext {
+      display: inline-block;
+      font-family: var(--text-raleway);
+      font-size: 2.6rem;
+      color: var(--text-gold);
+      font-weight: 600;
+      padding: 2rem;
+    }
+  
+    &__listen-now {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+  
+      &--heading {
+        grid-column: 1 / span 2;
+        margin-top: 13rem;
+        color: white;
+        font-family: var(--text-raleway);
+        font-size: 2.6rem;
+        font-weight: 600;
+        position: relative;
+        z-index: 2;
+
+        @media only screen and (max-width: 1150px) {
+          & {
+            margin-top: 10rem;
+          }
+        }
+        @media only screen and (max-width: 1050px) {
+          & {
+            margin-top: 7rem;
+          }
+        }
+      }
+      &--performer {
+        color: white;
+        grid-column: 1 / span 2;
+        text-align: left;
+        margin-left: 3rem;
+        font-size: 2.3rem;
+        position: relative;
+        z-index: 2;
+      }
+  
+      &--image {
+        position: absolute;
+        bottom: 7rem;
+        left: 15rem;
+        transform: scale(1.9);
+        z-index: 1;
+        grid-row: 1 / span 2;
+        grid-column: 2 / span 2;
+      }
+  
+      &--btn {
+        font-family: var(--text-source-sans);
+        font-size: 3.2rem;
+        padding: 0.5rem 2rem;
+        border-radius: 3px;
+        background-color: #5d5b60;
+        display: inline-block;
+        color: var(--text-gold);
+        margin-top: 3rem;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05);
+          text-shadow: black;
+        }
+
+         &:active {
+
+           transform: translateY(2px)
+         }
+        
+      }
+    }
+  }
+  
+  .hero__right {
+    grid-column: col-start 4 / full-end;
+    overflow: hidden;
+    position: relative;
+    //   align-self: end;
+  
+    &__image {
+      width: 100%;
+    
+    }
+  
+    &__navbar {
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      z-index: 1;
+  
+      list-style: none;
+      font-family: var(--text-raleway);
+      font-size: 2.2rem;
+      color: var(--text-light-gray);
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      text-transform: lowercase;
+    
+    
+    
+    & li a{
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      text-decoration: none;
+      color: var(--text-light-gray);
+      transition: all .2s ease;
+
+    }
+    
+    
+    
+    &--li a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+  
+    &--li:after:hover {
+      
+      width: 100%;
+    }
+    &--li a:hover{
+    transform: scale(1.03)
+    }
+    &--li a:hover:after {
+     
+      width: 100%;
+  left: 0;
+    }
+
+    &--li a:active {
+      transform: translateY(2px)
+    }
+
+
+
+    &--active {
+transform: scale(1.2);
+// text-decoration: underline;
+&:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 100%;
+}
+
+    }
+  
+  }
+  
+
+
+
+    
+  
+  }

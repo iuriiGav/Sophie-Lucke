@@ -1,0 +1,17 @@
+@mixin typography-ticket-left($font-size) {
+    font-family: var(--text-source-sans);
+    font-weight: 600;
+    font-size: $font-size;
+    color: #5f5f5f;
+  }
+  
+  @mixin section-header($color) {
+    margin-top: 3rem;
+    grid-column: col-start 1 / -1;
+    color: $color;
+    font-family:var(--text-source-sans);
+    font-weight: 600;
+    font-size: 6.4rem;
+    display: inline-block;
+    height: 10rem;
+  }

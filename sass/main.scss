@@ -1,0 +1,56 @@
+@import "reset-css";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import "./components/mixins";
+@import "./homepage-sections/hero";
+@import "./homepage-sections/upcoming-concerts";
+@import "./homepage-sections/watch-and-listen";
+@import "./homepage-sections/news";
+@import "./components/utils";
+@import "./homepage-sections/bio-and-galery";
+@import "./homepage-sections/galery";
+:root {
+  --background-color-darkest: #19181a;
+
+  --text-light-gray: #ede9e2;
+  --text-gold: #dd9323;
+
+//typography
+
+--text-source-sans: "Source Sans Pro", sans-serif;
+--text-raleway: Raleway, sans-serif;
+}
+
+
+
+
+
+@media only screen and (max-width: 1460px) {
+  html {
+    font-size: 55.5%;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  html {
+    font-size: 50.5%;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  html {
+    font-size: 45.5%;
+  }
+}
+.container {
+  display: grid;
+  grid-template-rows: 1fr min-content repeat(5, min-content);
+  grid-template-columns:
+    [full-start] repeat(12, [col-start] 1fr [col-end])
+    [full-end];
+  // grid-template-columns: 1fr repeat(8,  minmax(min-content, 14rem) ) 1fr ;
+}
+
+
+
+
+
+
