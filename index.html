@@ -6,6 +6,8 @@
     <title>Sophie Lucke</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js.js"></script>
   </head>
   <body>
     <div class="container">
@@ -29,7 +31,7 @@
               <p class="hero__sidebar__listen-now--performer--piano">
                 Tomoko Nishikawa - Klavier
               </p>
-              <a class="hero__sidebar__listen-now--btn">Play now</a>
+              <a href="#" class="hero__sidebar__listen-now--btn">Play now</a>
             </div>
             <img
               src="img/sophie-wo-bg.png"
@@ -46,14 +48,17 @@
             <li class="hero__right__navbar--li"><a href="">media</a></li>
             <li class="hero__right__navbar--li"><a href="">contact</a></li>
           </ul>
-          <img
-            src="/img/sophie-lucke.jpg"
-            alt="Sophie Lucke portrait"
-            class="hero__right__image"
-          />
+      
         </div>
-      </div>
 
+      </div>
+      <div class="hero__audio-player">
+
+        <audio class="hidden hero__audio-player--player" controls id="linkAudio">
+          <source src="/audio/Sophie2satzfertig-[AudioTrimmer.com].ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+        </audio>
+      </div>
       <div class="upcoming-concerts">
         <h2 class="upcoming-concerts__header">UPCOMING CONCERTS</h2>
 

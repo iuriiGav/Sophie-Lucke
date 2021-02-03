@@ -1,6 +1,5 @@
 .hero {
-    height: 100%;
-    max-height: 95vh;
+    max-height: 90vh;
     // background-color: var(--background-color-darkest);
     background-image: linear-gradient(135deg, #19181a, #5a595e);
     grid-column: full-start / full-end;
@@ -10,6 +9,27 @@
       [col-start] minmax(min-content, 16rem) [col-end]
     );
     overflow: hidden;
+
+    &__audio-player {
+      border-radius: 0;
+      position: fixed;
+      bottom: 0;
+      z-index: 100;
+      overflow: hidden;
+      display: block;
+      width: 100vw;
+      transition: all .3s ease-in-out;
+      &--player {
+        width: 100%;
+        height: 40px;
+        opacity: .5;
+        outline-style: none;
+        outline-color: #5a595e;
+      }
+
+    }
+
+    
   }
   
   .hero__sidebar {
@@ -18,7 +38,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     z-index: 2;
-    box-shadow: 0 3px 103px 20px #252429;
+    box-shadow: 0 3px 10px 20px #252429;
   
     &__logo {
       height: 70%;
@@ -48,7 +68,8 @@
   
       &--heading {
         grid-column: 1 / span 2;
-        margin-top: 13rem;
+        margin-top: 9.4rem;
+        margin-bottom: 3rem;
         color: white;
         font-family: var(--text-raleway);
         font-size: 2.6rem;
@@ -116,11 +137,18 @@
     overflow: hidden;
     position: relative;
     //   align-self: end;
+    background-image: url('/img/sophie-lucke.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   
-    &__image {
-      width: 100%;
+    // &__image {
+    //   min-width: 100%;
+    //   object-fit: cover;
+    //   // transform: scale(1.5);
+    //   // object-position: 50% 50%;
     
-    }
+    // }
   
     &__navbar {
       position: absolute;
