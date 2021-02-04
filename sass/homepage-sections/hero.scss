@@ -1,17 +1,15 @@
 .hero {
     max-height: 90vh;
-    // background-color: var(--background-color-darkest);
+    background-color: var(--background-color-darkest);
     background-image: linear-gradient(135deg, #19181a, #5a595e);
     grid-column: full-start / full-end;
     display: grid;
-    grid-template-columns: repeat(
-      12,
-      [col-start] minmax(min-content, 16rem) [col-end]
-    );
+    grid-template-columns: minmax(300px, 480px) minmax(600px, 1fr);
     @media only screen and (max-width: 970px) {
       & {
-        max-height: 50vh;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns:1fr;
+        grid-template-rows: 10rem 80rem;
+        // max-height: 75vh;
       }
     }
     overflow: hidden;
@@ -42,15 +40,12 @@
 
     @media only screen and (max-width: 970px) {
       & {
+      
+        display: none;
 
-        grid-column: col-start 1 / col-end 3;
-    // text-align: center;
-    // display: grid;
-    // grid-template-rows: 1fr 1fr;
-    // z-index: 2;
       }
     }
-    grid-column: col-start 1 / col-end 3;
+    // grid-column: col-start 1 / col-end 3;
     text-align: center;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -61,6 +56,8 @@
       height: 70%;
     }
     &__logo--logo {
+
+   
       font-family: var(--text-source-sans);
       font-size: 5rem;
       color: white;
@@ -83,11 +80,15 @@
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
       position: relative;
+     
   
       &--heading {
         grid-column: 1 / span 2;
         margin-top: 9.4rem;
         margin-bottom: 3rem;
+        text-align: left;
+        margin-left: 3rem;
+
         color: white;
         font-family: var(--text-raleway);
         font-size: 2.6rem;
@@ -119,6 +120,8 @@
       }
   
       &--image {
+
+       
         position: absolute;
         bottom: 7rem;
         left: 15rem;
@@ -154,7 +157,7 @@
   
   .hero__right {
  
-    grid-column: col-start 4 / full-end;
+    // grid-column: col-start 4 / full-end;
     overflow: hidden;
     position: relative;
     //   align-self: end;
@@ -172,6 +175,11 @@
     // }
   
     &__navbar {
+      @media only screen and (max-width: 970px) {
+        & {
+        display: none;
+        }
+      }
       position: absolute;
       top: 2rem;
       left: 0;

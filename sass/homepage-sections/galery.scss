@@ -75,7 +75,59 @@
             grid-column: col-start 2  / col-end 12;
             grid-row: row-start 9  / row-end 10;
         }
+
+
+
+
+
+
+        ///////////////////////////////
+        /////////change galery////////
+
+        @media only screen and (max-width: 770px) {
+            &--large-image {
+                // background: green;
+                grid-column: col-start 2  / col-end 6;
+                grid-row: row-start 5  / row-end 8;
+                overflow: hidden;
+                transition: all .3s;
+              
+              
+          
+    @include background-image-galery('/img/galery/42A0934.jpg') 
+            }
+            &--small-image1{
+                // background: yellow;
+                overflow: hidden;
+                grid-column: col-start 2  / col-end 11;
+                grid-row: row-start 2  / row-end 4;
+                @include background-image-galery('/img/sophie-bg-pages.jpg');
+              
+          
+            }
+    
+            &--small-image2{
+                display: none;
+            }
+    
+            &--medium-image {
+                // background: pink;
+                overflow: hidden;
+                grid-column: col-start 7   / col-end 11;
+                grid-row: row-start 5  / row-end 8;
+                @include background-image-galery('/img/galery/14700745_10208929141558352_1767394398515383186_o.jpg') 
+            }
+    
+            &--see-all-btn {
+                // background: red;
+                overflow: hidden;
+                grid-column: col-start 2  / col-end 12;
+                grid-row: row-start 9  / row-end 10;
+            }
+        }
     }
+
+
 }
 
 

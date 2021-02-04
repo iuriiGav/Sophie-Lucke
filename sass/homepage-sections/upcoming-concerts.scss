@@ -12,6 +12,9 @@
 
   &__header {
     @include section-header(#5c5a60);
+    margin-bottom: -3rem;
+
+  
   }
 
   &__info {
@@ -26,6 +29,8 @@
     grid-template-columns: 30% 70%;
     padding: 3rem;
     position: relative;
+  
+ 
     &__left {
       display: flex;
       flex-direction: column;
@@ -41,6 +46,8 @@
       &--city {
         @include typography-ticket-left(2.3rem);
       }
+
+      
     }
 
     &__right {
@@ -60,6 +67,109 @@
         }
       }
     }
+
+
+
+
+    @media only screen and (max-width: 970px) {
+      
+      & {
+      
+       display: flex;
+       flex-direction: column;
+
+       &__left {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-right: none;
+        margin-bottom: 2rem;
+
+        &--date {
+          @include typography-ticket-left(2.6rem);
+          margin-right: 2rem;
+          padding-right: 2rem;
+          border-right: solid 2px #dadde6;
+        }
+        &--time {
+          @include typography-ticket-left(2.6rem);
+          margin-right: 2rem;
+          padding-right: 2rem;
+          border-right: solid 2px #dadde6;
+        }
+        &--city {
+          @include typography-ticket-left(2.6rem);
+        }
+  
+        
+      }
+  
+
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        min-width: 80%;
+        margin: 0 auto;
+        &--concerthall {
+          @include typography-ticket-left(2.6rem);
+        }
+  
+        &--piece {
+          @include typography-ticket-left(2.8rem);
+          &--span {
+            font-size: 2.3rem;
+          }
+        }
+      }
+      }
+    }
+
+
+    @media only screen and (max-width: 460px) {
+      
+      & {
+      
+      
+
+       &__left {
+      
+
+        &--date {
+
+          font-size: 2rem;
+          
+        }
+        &--time {
+          font-size: 2rem;
+        }
+        &--city {
+          font-size: 2rem;
+        }
+  
+        
+      }
+  
+
+
+      &__right {
+      
+        &--concerthall {
+       font-size: 2.2rem;
+        }
+  
+        &--piece {
+          font-size: 2.2rem;
+          &--span {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      }
+    }
+
   }
 
   &__buttons {
@@ -70,5 +180,14 @@
     height: auto;
     text-align: center;
     margin-bottom: 12rem;
+    
+    
+  }
+
+  @media only screen and (max-width: 460px) {
+
+    & {
+      margin-bottom: -7rem;
+    }
   }
 }
