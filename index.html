@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="hero">
+      <div id="hero" class="hero">
         <div class="hero__sidebar">
           <div class="hero__sidebar__logo">
             <h1 class="hero__sidebar__logo--logo">SOPHIE LÜCKE</h1>
@@ -42,11 +42,20 @@
         </div>
         <div class="hero__right">
           <ul class="hero__right__navbar">
-            <li class="hero__right__navbar--li hero__right__navbar--active"><a href="">home</a></li>
-            <li class="hero__right__navbar--li"><a href="">concerts</a></li>
-            <li class="hero__right__navbar--li"><a href="">biography</a></li>
-            <li class="hero__right__navbar--li"><a href="">media</a></li>
-            <li class="hero__right__navbar--li"><a href="">contact</a></li>
+            <li class="hero__right__navbar--li navlink-active"><a href="">home</a></li>
+            <li class="hero__right__navbar--li"><a href="/concerts.html">concerts</a></li>
+            <li class="hero__right__navbar--li"><a href="/biography.html">biography</a></li>
+            
+            <li class="hero__right__navbar--li">
+              <div class="hero__right__navbar--li--dropdown">
+                <button class="hero__right__navbar--li--dropdown--btn--no-hover">media</button>
+                <div class="hero__right__navbar--li--dropdown--content">
+                  <a href="/media-news.html">news</a>
+                  <a href="/media-records.html">records</a>
+                </div>
+
+              </div>
+            <li class="hero__right__navbar--li"><a href="#contact-us">contact</a></li>
           </ul>
       
         </div>
@@ -77,7 +86,7 @@
               Carmen | Gastsolobass
             </h3>
 
-            <a href="" class="upcoming-concerts__info__right--see-more-btn">
+            <a href="" class="btn-small">
               See more
             </a>
           </div>
@@ -101,8 +110,8 @@
               >
               | Solobass
             </h3>
-
-            <a href="" class="upcoming-concerts__info__right--see-more-btn">
+            
+            <a href="" class="btn-small">
               See more
             </a>
           </div>
@@ -123,17 +132,20 @@
               Carmen | Gastsolobass
             </h3>
 
-            <a href="" class="upcoming-concerts__info__right--see-more-btn">
+            <a href="" class="btn-small">
               See more
             </a>
           </div>
         </div>
 
         <div class="upcoming-concerts__buttons">
-          <a href="#" class="upcoming-concerts__buttons--previous"
+          
+          <a href="#" class="btn-large-dark"
             >PREVIOUS CONCERTS</a
           >
-          <a href="#" class="upcoming-concerts__buttons--next"
+
+          
+          <a href="#" class="btn-large-gold"
             >SEE ALL CONCERTS</a
           >
         </div>
@@ -161,7 +173,7 @@
 
             <div class="watch-and-listen__cd__right--bottom-city-and-button">
                 <p class="watch-and-listen__cd__right--bottom-city-and-button--btn--city">2014, Hannover</p>
-                <a href="https://www.amazon.de/Todes-Tod-Liederzyklen-Barbara-H%C3%B6fling/dp/B00UW6AFFC" target="_blank" class="watch-and-listen__cd__right--bottom-city-and-button--btn">
+                <a href="https://www.amazon.de/Todes-Tod-Liederzyklen-Barbara-H%C3%B6fling/dp/B00UW6AFFC" target="_blank" class="btn-medium-gold">
                     Get on Amazon.de
                 </a>
 
@@ -194,7 +206,8 @@
     
               <div class="watch-and-listen__cd__right--bottom-city-and-button">
                   <p class="watch-and-listen__cd__right--bottom-city-and-button--btn--city">2016, München</p>
-                  <a href="https://www.amazon.de/Works-Ensemble-Zeitsprung/dp/B01J2K34R4" target="_blank" class="watch-and-listen__cd__right--bottom-city-and-button--btn">
+                  
+                  <a href="https://www.amazon.de/Works-Ensemble-Zeitsprung/dp/B01J2K34R4" target="_blank" class="btn-medium-gold">
                       Get on Amazon.de
                   </a>
     
@@ -274,7 +287,7 @@
                     </div>
 
                     
-                    <a href="" class="upcoming-concerts__info__right--see-more-btn">
+                    <a href="" class="btn-small">
                        Read more
                       </a>
                 </div>
@@ -334,7 +347,7 @@
             </div>
 
             
-                    <a href="#" class="mb-small upcoming-concerts__buttons--next"
+                    <a href="#" class="mb-small btn-large-gold"
                     >SEE ALL NEWS</a>
 
         </div>
@@ -378,7 +391,7 @@
                     Ihr Instrument ist ein englischer Bass von William Forster aus dem frühen 19. Jahrhundert.</p>
                     a
                   </div>
-                  <a href="" class="upcoming-concerts__info__right--see-more-btn upcoming-concerts__info__right--see-more-btn--show-full-german-bio">
+                  <a href="/biography.html" class="btn-large-gold btn-large-gold--show-bio">
                       Read full bio
                      </a>
             </li>
@@ -417,7 +430,7 @@
                     In particular, the comprehension of a totality in art, the joining of many interesting parts into a whole, employs Sophie. So she is a founding member of the young baroque ensemble „Concerto München“ as well as  „Artist in residence der Tage der neuen Musik“ in Bamberg 2017 and planning many more future projects in various forms …
                     <br><br>
                     Since 2014 she is Principal Double Bassist at the Staatstheater am Gärtnerplatz in Munich.</p>
-                    <a href="" class="upcoming-concerts__info__right--see-more-btn upcoming-concerts__info__right--see-more-btn--show-full-german-bio">
+                    <a href="/biography.html" class="btn-large-gold btn-large-gold--show-bio">
                         Read more
                        </a>
                 </div>
@@ -443,7 +456,7 @@
 
             </div>
             <div class="galery__container--see-all-btn">
-                <a href="#" class="upcoming-concerts__buttons--next upcoming-concerts__buttons--next--btn-see-galery"
+                <a href="#" class="btn-large-gold"
                 >SEE ALL PHOTOS</a
               >
             </div>
@@ -460,6 +473,14 @@
         </p>
        
 
+    </div>
+
+    <div id="contact-us" class="contact-popup">
+      <div class="contact-popup__content">
+        <a href="#hero" class="contact-popup__content--close">&times;</a>
+      <a  class="contact-popup__content--link" href="mailto:mail@sophieluecke.de">mail@sophieluecke.de</a>
+
+      </div>
     </div>
      
     </div>

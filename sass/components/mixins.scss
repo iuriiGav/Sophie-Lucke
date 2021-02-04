@@ -15,3 +15,17 @@
     display: inline-block;
     height: 10rem;
   }
+
+  @mixin main-container-grid {
+    display: grid;
+    grid-template-rows: 1fr min-content repeat(5, min-content);
+    grid-template-columns:
+      [full-start] repeat(12, [col-start] 1fr [col-end])
+      [full-end];
+  }
+
+  @mixin twelve-col-grid {
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
+  }
