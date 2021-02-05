@@ -595,7 +595,8 @@ a, a:active, a:focus {
 .hero__right {
   overflow: hidden;
   position: relative;
-  background-image: url("img/sophie-lucke.jpg");
+  /* background-image: url("./img/sophie-lucke.jpg"); */
+  background-image: url("../img/sophie-lucke.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
