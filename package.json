@@ -6,7 +6,8 @@
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
     "deploy": "gh-pages -d Sophie-Lucke",
-    "prefix:css": "postcss css/style.css --use autoprefixer -o css/style.prefix.css"
+    "prefix:css": "postcss css/style.css --use autoprefixer -o css/style.css",
+    "copyfiles": "copyfiles *.js audio/*.ogg *.html css/style.css img/galery/*.jpg img/sophie-cover-pictures/*.jpg img/*.jpg img/*.png Sophie-Lucke"
   },
   "browserslist": "last 10 versions",
   "author": "",
