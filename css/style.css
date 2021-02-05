@@ -557,9 +557,6 @@ a, a:active, a:focus {
       font-weight: 600;
       position: relative;
       z-index: 2; }
-      @media only screen and (min-width: 1024px) {
-        .hero__sidebar__listen-now--heading {
-          margin-top: 15rem; } }
     .hero__sidebar__listen-now--performer {
       color: white;
       grid-column: 1 / span 2;
