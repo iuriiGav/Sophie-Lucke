@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sophie Lucke</title>
-
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js.js"></script>
@@ -110,6 +110,7 @@
           </div>
         </div>
         <div class="hero__right">
+          <img src="img/sophie-cover-pictures/sophie-tall-crpoped.jpg" alt="" class="hero__right__cover-hero-mobile-img">
           <ul class="hero__right__navbar">
             <li class="hero__right__navbar--li navlink-active"><a href="https://iuriigav.github.io/Sophie-Lucke/">home</a></li>
             <li class="hero__right__navbar--li"><a href="https://iuriigav.github.io/Sophie-Lucke//concerts.html">concerts</a></li>
@@ -352,8 +353,11 @@
                     </p>
 
                     <div class="news__container__pictures">
-                        <img src="img/IMG_8562.jpg" alt="Sophie gives a masterclass to young student" class="news__container__pictures--img1">
-                        <img src="img/IMG_8561.jpg" alt="Sophie performs with a chamber group" class="news__container__pictures--img2">
+                      <div class="carousel" data-flickity>
+                        <div class="carousel-cell"> <img src="img/IMG_8562.jpg" alt="Sophie gives a masterclass to young student" ></div>
+                        <div class="carousel-cell"> <img src="img/IMG_8561.jpg" alt="Sophie performs with a chamber group">  </div>
+                        
+                      </div>
                     </div>
 
                     
@@ -555,4 +559,5 @@
      
     </div>
   </body>
+  <script defer src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </html>
