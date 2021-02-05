@@ -1,103 +1,170 @@
+@import "../components/mixins";
+
 .bio-page{
-//   background: linear-gradient(
-//     132.56deg,
-//     rgba(27, 21, 21, 0.58) 0%,
-//     rgba(15, 21, 75, 0.05) 100%
-//   );
+
   position: relative;
-  min-height: 200rem;
+//  height: calc(100% + 4rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+
   &__header {
     @include section-header(rgb(233, 233, 233));
   }
 
-&__tabs {
-    width: 80%;
-    position: relative;
-    text-align: left;
-
-    &__li {
-      float: left;
-      display: block;
-
-      input[type="radio"] {
-        position: absolute;
-        top: 0;
-        left: -9999px;
-      }
-
-      input[type="radio"]:not(:checked) + label {
-        background: #ddd;
-        // padding: 36px;
-      }
-      input[type="radio"]:checked + label {
-        color: #5c5a60;
-        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        font-family: var(--text-source-sans);
-        font-style: normal;
-        font-weight: 600;
-        font-size: 2.6rem;
-        text-decoration: none;
-      }
-
-      &--label {
-        display: block;
-        padding: 1.2rem 2.1rem;
-        border-radius: 2px 2px 0 0;
-        font-family: Lato;
-        font-size: 2.3rem;
-        font-weight: 700;
-        color: var(--text-gold);
-        letter-spacing: 0.3rem;
-        text-decoration: underline;
-        text-transform: uppercase;
-        background: $tabs-base-color;
-        cursor: pointer;
-        position: relative;
-        top: 4px;
-        // transition: all 0.2s ease-in-out;
-        &:hover {
-          transform: translateY(-2px);
-        }
-
-        &:active,
-        &:focus {
-        //  outline-color: green;
-        }
-      }
 
 
-      &--tab-content {
-        background: white;
 
-        z-index: 2;
-        display: none;
-        overflow: hidden;
-        width: 100%;
-        font-family: Raleway;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 2.3rem;
-        line-height: 3.6rem;
-        padding: 4rem;
-        position: absolute;
-        top: 5.3rem;
-        left: 0;
-      }
+}
+
+.bio__content {
+  background: white;
+
+          z-index: 2;
+          // display: none;
+          width: 80%;
+          margin: 0 auto;
+          height: 100%;
+          font-family: Raleway;
+          font-style: normal;
+          font-weight: 200;
+          font-size: 2.3rem;
+          line-height: 3.6rem;
+          border-radius: 5px;
+          text-align: justify;
+          padding: 4rem;
+          margin-bottom: 4rem;
+
+          @media only screen and (max-width: 550px) {
+            &{
+              width: 90%;
+              font-size: 2.1rem;
+            }
+          }
+          &__lang-btns-container {
+            width: 80%;
+            display: flex;
+            justify-content: flex-start;
+            padding: 3rem;
+          &--btn{
+            display: inline-block;
+            padding-right: 2rem;
+            &--not-active {
+              color: rgba(197, 197, 197, 0.7);
+              font-size: 1.8rem;
+            }
+          }
+          }
+}
+
+
+
+
+
+//////////////////////////////////////
+////////////ALTERNATIVE WITH TABS/////
+
+
+// &__tabs {
+//     width: 80%;
+//     position: relative;
+//     text-align: left;
+
+//     &__li {
+//       float: left;
+//       display: block;
+
+//       input[type="radio"] {
+//         position: absolute;
+//         top: 0;
+//         left: -9999px;
+//       }
+
+//       input[type="radio"]:not(:checked) + label {
+//         background: #ddd;
+//         // padding: 36px;
+//       }
+//       input[type="radio"]:checked + label {
+//         color: #5c5a60;
+//         text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+//         font-family: var(--text-source-sans);
+//         font-style: normal;
+//         font-weight: 600;
+//         font-size: 2.6rem;
+//         text-decoration: none;
+//       }
+
+//       &--label {
+//         display: inline-block;
+//         padding: 1.2rem 2.1rem;
+//         border-radius: 2px 2px 0 0;
+//         font-family: Lato;
+//         font-size: 2.3rem;
+//         font-weight: 700;
+//         color: var(--text-gold);
+//         letter-spacing: 0.3rem;
+//         text-decoration: underline;
+//         text-transform: uppercase;
+//         background: $tabs-base-color;
+//         cursor: pointer;
+//         position: absolute;
+//         top: 4px;
+//         // transition: all 0.2s ease-in-out;
+//         &:hover {
+//           transform: translateY(-2px);
+//         }
+
+//         &:active,
+//         &:focus {
+//         //  outline-color: green;
+//         }
+
+//         &--eng {
+//           position: absolute;
+//           left: 180px;
+//         }
+//       }
+
+
+//       &--tab-content {
+//         background: white;
+
+//         z-index: 2;
+//         display: none;
+//         width: 100%;
+//         height: 100%;
+//         overflow-y: auto;
+//         font-family: Raleway;
+//         font-style: normal;
+//         font-weight: 200;
+//         font-size: 2.3rem;
+//         line-height: 3.6rem;
+//         padding: 4rem;
+//         position: relative;
+//         top: 5.3rem;
+//         // left: 0;
+//         text-align: justify;
+
+//         @media only screen and (max-width: 720px) {
+//     & {
+
+//       height: 500px;
+//       overflow-y: auto;
+//     }
+//   }
+//       }
 
   
-    }
+//     }
 
-    [id^="tab"]:checked + label {
-      top: 0;
-      padding-top: .9rem;
-      // background: darken($tabs-base-color, 15);
-    }
-    [id^="tab"]:checked ~ [id^="tab-content"] {
-      display: block;
-    }
-  }
-}
+//     [id^="tab"]:checked + label {
+//       top: 0;
+//       padding-top: .9rem;
+//       // background: darken($tabs-base-color, 15);
+//     }
+//     [id^="tab"]:checked ~ [id^="tab-content"] {
+//       display: block;
+//     }
+//   }

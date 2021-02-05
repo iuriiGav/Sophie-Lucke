@@ -40,14 +40,14 @@
           
           
       
-@include background-image-galery('/img/galery/42A0934.jpg') 
+@include background-image-galery('../img/galery/42A0934.jpg') 
         }
         &--small-image1{
             // background: yellow;
             overflow: hidden;
             grid-column: col-start 6  / col-end 8;
             grid-row: row-start 2  / row-end 4;
-            @include background-image-galery('/img/galery/14700745_10208929141558352_1767394398515383186_o.jpg');
+            @include background-image-galery('../img/galery/14700745_10208929141558352_1767394398515383186_o.jpg');
           
       
         }
@@ -58,7 +58,7 @@
             grid-column: col-start 9  / col-end 11;
             grid-row: row-start 2  / row-end 4;
    
-            @include background-image-galery('/img/galery/IMG_3546.jpg') 
+            @include background-image-galery('../img/galery/IMG_3546.jpg') 
         }
 
         &--medium-image {
@@ -66,7 +66,7 @@
             overflow: hidden;
             grid-column: col-start 6  / col-end 11;
             grid-row: row-start 5  / row-end 8;
-            @include background-image-galery('/img/galery/14344227_1278549945502120_5390873153939167157_n.jpg') 
+            @include background-image-galery('../img/galery/14344227_1278549945502120_5390873153939167157_n.jpg') 
         }
 
         &--see-all-btn {
@@ -94,14 +94,14 @@
               
               
           
-    @include background-image-galery('/img/galery/42A0934.jpg') 
+    @include background-image-galery('../img/galery/42A0934.jpg') 
             }
             &--small-image1{
                 // background: yellow;
                 overflow: hidden;
                 grid-column: col-start 2  / col-end 11;
                 grid-row: row-start 2  / row-end 4;
-                @include background-image-galery('/img/sophie-bg-pages.jpg');
+                @include background-image-galery('../img/sophie-bg-pages.jpg');
               
           
             }
@@ -115,7 +115,7 @@
                 overflow: hidden;
                 grid-column: col-start 7   / col-end 11;
                 grid-row: row-start 5  / row-end 8;
-                @include background-image-galery('/img/galery/14700745_10208929141558352_1767394398515383186_o.jpg') 
+                @include background-image-galery('../img/galery/14700745_10208929141558352_1767394398515383186_o.jpg') 
             }
     
             &--see-all-btn {
@@ -132,13 +132,3 @@
 
 
 
-.footer {
-    align-self: end;
-    justify-self: center;
-    background-color: #1A191B;
-    font-family: var(--text-source-sans);
-    text-align: center;
-    font-size: 1.8rem;
-    color:rgba(221, 221, 221, .7);
-    padding-bottom: 2rem;
-}

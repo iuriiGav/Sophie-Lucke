@@ -10,6 +10,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     overflow-x: hidden;
+    min-width: 375px;
 }
 
 /* Remove default padding */
@@ -45,6 +46,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   position: relative;
+  overflow-x: hidden;
   // max-width: 1200px;
   // margin: 0 auto
 

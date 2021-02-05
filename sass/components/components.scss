@@ -23,6 +23,9 @@
 }
 
 .component__top-navbar-except-home {
+  background-color: var(--background-color-darkest);
+  background-image: linear-gradient(135deg, #19181a, #5a595e);
+  margin: 0;
   display: flex;
   width: 100%;
   margin: 1rem 0;
@@ -383,6 +386,13 @@
       color: var(--text-gold);
       cursor: pointer;
       padding-right: 5rem;
+
+      @media only screen and (max-width: 800px) {
+        &{
+          font-size: 2.4rem;
+          padding-right: 0;
+        }
+      }
     }
   }
 }
@@ -408,7 +418,7 @@
 .mobile-nav__nav-container {
   z-index: 99;
 display: none;
-  pointer-events: none;
+  // pointer-events: none;
   @media only screen and (max-width: 800px) {
     & {
     display: block;
@@ -484,6 +494,8 @@ display: none;
   width: 50vw;
   max-width: 300px;
   position: absolute;
+  outline: none;
+
   top: 0;
   right: 0;
   height: 65em;
@@ -546,10 +558,24 @@ color:var(--text-gold);
 .footer {
   align-self: end;
   justify-self: center;
-  background-color: #1A191B;
+  // background-color: #1A191B;
   font-family: var(--text-source-sans);
   text-align: center;
   font-size: 1.8rem;
   color:rgba(221, 221, 221, .7);
   padding-bottom: 2rem;
+}
+
+.footer--home {
+
+  background-color: #1A191B;
+
+}
+
+.footer--media-records{
+  grid-column: col-start 1 / col-end -1;
+}
+
+.footer--galery {
+  grid-column: col-start 1 / col-end -1;
 }

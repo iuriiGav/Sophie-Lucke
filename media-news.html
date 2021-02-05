@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sophie Lucke</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/js.js"></script>
+    <script src="js.js"></script>
   </head>
   <body>
     <div id="news" class="secondary-wrapper">
@@ -21,19 +22,43 @@
                     <h2 class="component__top-navbar-except-home--left--sublogo">kontrabass ° double bass</h2>
 
                 </div>
+
+
+                
                 <div class="component__top-navbar-except-home--right">
+                    <div class="mobile-nav__nav-container">
+                        <div class="mobile-nav__bg"></div>
+                        <div class="mobile-nav__button" tabindex="0">
+                          <span class="mobile-nav__icon-bar"></span>
+                          <span class="mobile-nav__icon-bar"></span>
+                          <span class="mobile-nav__icon-bar"></span>
+                        </div>
+                        <div class="mobile-nav__nav-content" tabindex="0">
+                          <ul class="mobile-nav__nav-content--ul">
+                            <li class="mobile-nav__nav-content--li"><a  class="mobile-nav__nav-content--link " href="https://iuriigav.github.io/Sophie-Lucke/">home</a></li>
+                            <li class="mobile-nav__nav-content--li"><a  class="mobile-nav__nav-content--link" href="https://iuriigav.github.io/Sophie-Lucke/concerts.html">concerts</a></li>
+                            <li class="mobile-nav__nav-content--li"><a  class="mobile-nav__nav-content--link" href="https://iuriigav.github.io/Sophie-Lucke/biography.html">biography</a></li>
+                            <li class="mobile-nav__nav-content--li"><a  class="mobile-nav__nav-content--link navlink-active--mobile-nav" href="https://iuriigav.github.io/Sophie-Lucke/media-news.html">news</a></li>
+                            <li class="mobile-nav__nav-content--li"><a  class="mobile-nav__nav-content--link" href="https://iuriigav.github.io/Sophie-Lucke/media-records.html">records</a></li>
+                            <li class="mobile-nav__nav-content--li"><a  class="mobile-nav__nav-content--link" href="https://iuriigav.github.io/Sophie-Lucke/media-gallery.html">gallery</a></li>
+                            <li class="mobile-nav__nav-content--li"><a  class="mobile-nav__nav-content--link" href="#contact-us">contact</a></li>
+                    
+                          </ul>
+                        </div>
+                      </div>
                    
                     <ul class="component__top-navbar-except-home--right--navbar">
-                        <li class="component__top-navbar-except-home--right--navbar--li"><a href="/index.html">home</a></li>
-                        <li class="component__top-navbar-except-home--right--navbar--li "><a href="/concerts.html">concerts</a></li>
-                        <li class="component__top-navbar-except-home--right--navbar--li"><a href="/biography.html">biography</a></li>
+                        <li class="component__top-navbar-except-home--right--navbar--li"><a href="https://iuriigav.github.io/Sophie-Lucke/index.html">home</a></li>
+                        <li class="component__top-navbar-except-home--right--navbar--li "><a href="https://iuriigav.github.io/Sophie-Lucke/concerts.html">concerts</a></li>
+                        <li class="component__top-navbar-except-home--right--navbar--li"><a href="https://iuriigav.github.io/Sophie-Lucke/biography.html">biography</a></li>
                         
                         <li class="component__top-navbar-except-home--right--navbar--li">
                           <div class="component__top-navbar-except-home--right--navbar--li--dropdown">
                             <button class="component__top-navbar-except-home--right--navbar--li--dropdown--btn--no-hover navlink-active">media<span class="navlink-active--span">(news)</span></button>
                             <div class="component__top-navbar-except-home--right--navbar--li--dropdown--content">
-                              <a href="/media-news.html">news</a>
-                              <a href="/media-records.html">records</a>
+                              <a href="https://iuriigav.github.io/Sophie-Lucke/media-news.html">news</a>
+                              <a href="https://iuriigav.github.io/Sophie-Lucke/media-records.html">records</a>
+                              <a  href="https://iuriigav.github.io/Sophie-Lucke/media-gallery.html">gallery</a>
                             </div>
             
                           </div>
@@ -53,7 +78,7 @@
 
 
             <div class="secondary-wrapper--img">
-                <img src="/img/temp-bg.png" alt="Sophie gives master-class" class="secondary-wrapper--img--img">
+                <img src="img/temp-bg.png" alt="Sophie gives master-class" class="secondary-wrapper--img--img">
             </div>
 
 
@@ -97,8 +122,15 @@
                     </p>
 
                     <div class="news__page__container__pictures">
-                        <img src="/img/IMG_8562.jpg" alt="Sophie gives a masterclass to young student" class="news__page__container__pictures--img1">
-                        <img src="/img/IMG_8561.jpg" alt="Sophie performs with a chamber group" class="news__page__container__pictures--img2">
+
+                        <div class="carousel" data-flickity>
+                            <div class="carousel-cell"> <img src="img/IMG_8562.jpg" alt="Sophie gives a masterclass to young student" ></div>
+                            <div class="carousel-cell"> <img src="img/IMG_8561.jpg" alt="Sophie performs with a chamber group">  </div>
+                            
+                          </div>
+                          
+                        <!-- <img src="img/IMG_8562.jpg" alt="Sophie gives a masterclass to young student" class="news__page__container__pictures--img1">
+                        <img src="img/IMG_8561.jpg" alt="Sophie performs with a chamber group" class="news__page__container__pictures--img2"> -->
                     </div>
 
                     
@@ -141,7 +173,7 @@
                     </p>
 
                     <div class="news__page__container__youtube-video">
-                        <iframe class="news__page__container__youtube-video--iframe"  src="https://www.youtube.com/embed/kBriEcHUaM0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="news__page__container__youtube-video--iframe" id="news__container__youtube-video--iframe"  src="https://www.youtube.com/embed/kBriEcHUaM0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     </div>
 
@@ -164,9 +196,17 @@
 
         </div>
       </div>
+
+      <footer class="footer">
+        <p class="footer__sophie-copyright">
+            all rights reserved &copy; Sophie Lücke 2021 | created by iurii gavryliuk
+        </p>
+       
+
+    </footer>
               </div><!-- end of watch and listen -->
 
-
+            
         
             </div><!-- END OF CONTENT -->
        
@@ -183,4 +223,5 @@
 
     </div>
   </body>
+  <script defer src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </html>
