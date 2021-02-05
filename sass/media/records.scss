@@ -145,11 +145,12 @@
           }
   
           &__left {
-            display: flex;
-            margin-top: 3rem;
-            flex-direction: row-reverse;
-            height: fit-content;
-            justify-content: center;
+            display: none;
+            // display: flex;
+            // margin-top: 3rem;
+            // flex-direction: row-reverse;
+            // height: fit-content;
+            // justify-content: center;
           }
         }
   

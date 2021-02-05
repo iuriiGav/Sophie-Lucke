@@ -103,8 +103,7 @@ a, a:active, a:focus {
   background-image: linear-gradient(135deg, #19181a, #5a595e);
   margin: 0;
   display: flex;
-  width: 100%;
-  margin: 1rem 0; }
+  width: 100%; }
   .component__top-navbar-except-home--left {
     display: flex;
     flex-direction: column;
@@ -420,9 +419,6 @@ a, a:active, a:focus {
 
 .mobile-nav__icon-bar + .mobile-nav__icon-bar {
   margin-top: 5px; }
-
-.mobile-nav__nav-container:focus-within .mobile-nav__button {
-  pointer-events: none; }
 
 .mobile-nav__nav-container:focus-within .mobile-nav__icon-bar:nth-of-type(1) {
   transform: translate3d(0, 8px, 0) rotate(45deg); }
@@ -819,18 +815,20 @@ a, a:active, a:focus {
             .upcoming-concerts__info__right--piece--span {
               font-size: 2.3rem; } }
     @media only screen and (max-width: 460px) {
-      .upcoming-concerts__info__left--date {
-        font-size: 2rem; }
-      .upcoming-concerts__info__left--time {
-        font-size: 2rem; }
-      .upcoming-concerts__info__left--city {
-        font-size: 2rem; }
-      .upcoming-concerts__info__right--concerthall {
-        font-size: 2.2rem; }
-      .upcoming-concerts__info__right--piece {
-        font-size: 2.2rem; }
-        .upcoming-concerts__info__right--piece--span {
-          font-size: 1.6rem; } }
+      .upcoming-concerts__info {
+        grid-column: col-start 2 / col-end -2; }
+        .upcoming-concerts__info__left--date {
+          font-size: 2rem; }
+        .upcoming-concerts__info__left--time {
+          font-size: 2rem; }
+        .upcoming-concerts__info__left--city {
+          font-size: 2rem; }
+        .upcoming-concerts__info__right--concerthall {
+          font-size: 2.2rem; }
+        .upcoming-concerts__info__right--piece {
+          font-size: 2.2rem; }
+          .upcoming-concerts__info__right--piece--span {
+            font-size: 1.6rem; } }
   .upcoming-concerts__buttons {
     grid-column: col-start 3 / -3;
     display: flex;
@@ -958,11 +956,7 @@ a, a:active, a:focus {
           .watch-and-listen__cd__right--bottom-city-and-button--btn--city {
             font-size: 2rem; }
         .watch-and-listen__cd__left {
-          display: flex;
-          margin-top: 3rem;
-          flex-direction: row-reverse;
-          height: fit-content;
-          justify-content: center; }
+          display: none; }
       .watch-and-listen__cd--cover-back {
         position: relative;
         top: 0;
@@ -1051,6 +1045,17 @@ a, a:active, a:focus {
       font-size: 2.4rem;
       margin-bottom: 3rem; } }
 
+.watch-and-listen__cd--top-mobile {
+  display: none; }
+
+@media only screen and (max-width: 970px) {
+  .watch-and-listen__cd--top-mobile {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+    margin: 0 auto; } }
+
 .news {
   background: #f3f3f3;
   height: auto;
@@ -1118,7 +1123,6 @@ a, a:active, a:focus {
       width: 100%;
       line-height: 4rem;
       margin-bottom: 10px;
-      padding-right: 5rem;
       text-align: justify; }
     .news__container--left__date {
       font-family: var(--text-source-sans);
@@ -1905,11 +1909,7 @@ a, a:active, a:focus {
           .media__records__cd__right--bottom-city-and-button--btn--city {
             font-size: 2rem; }
         .media__records__cd__left {
-          display: flex;
-          margin-top: 3rem;
-          flex-direction: row-reverse;
-          height: fit-content;
-          justify-content: center; }
+          display: none; }
       .media__records__cd--cover-back {
         position: relative;
         top: 0;

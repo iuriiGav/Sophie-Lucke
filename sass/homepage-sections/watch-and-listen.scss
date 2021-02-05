@@ -24,6 +24,11 @@
     grid-auto-flow: column;
     grid-template-columns: 40% 60%;
     margin-bottom: 10rem;
+
+
+
+       
+
     @media only screen and (min-width: 1900px) {
       & {
         min-height: 50rem;
@@ -143,11 +148,13 @@
         }
 
         &__left {
-          display: flex;
-          margin-top: 3rem;
-          flex-direction: row-reverse;
-          height: fit-content;
-          justify-content: center;
+          display: none;
+
+          // display: flex;
+          // margin-top: 3rem;
+          // flex-direction: row-reverse;
+          // height: fit-content;
+          // justify-content: center;
         }
       }
 
@@ -281,3 +288,25 @@
   
 }
 
+
+
+////////////////////////////////////////
+///////////for carousel//////////////
+.watch-and-listen__cd--top-mobile{
+ display: none;
+
+}
+
+
+
+@media only screen and (max-width: 970px) {
+  .watch-and-listen__cd--top-mobile{
+display: flex;
+justify-content: center;
+align-content: center;
+width: 60%;
+margin: 0 auto;
+
+  
+  }
+}

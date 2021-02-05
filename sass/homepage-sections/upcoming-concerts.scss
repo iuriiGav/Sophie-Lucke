@@ -74,7 +74,6 @@
     @media only screen and (max-width: 970px) {
       
       & {
-      
        display: flex;
        flex-direction: column;
 
@@ -131,6 +130,7 @@
     @media only screen and (max-width: 460px) {
       
       & {
+        grid-column: col-start 2 / col-end -2;
       
       
 

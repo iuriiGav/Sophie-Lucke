@@ -63,7 +63,7 @@
       width: 100%;
       line-height: 4rem;
       margin-bottom: 10px;
-      padding-right: 5rem;
+      // padding-right: 5rem;
       text-align: justify;
     }
 
@@ -179,7 +179,13 @@
         cursor: pointer;
         padding-right: 5rem;
       }
+      // &__youtube-video {
+      //   display: inline-block;
+      //   margin: 0 auto;
+      // }
     }
+
+ 
 
     &__youtube-video--iframe {
       width: 100%;
