@@ -5,20 +5,28 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
-    "deploy": "gh-pages -d Sophie-Lucke",
     "prefix:css": "postcss css/style.css --use autoprefixer -o css/style.css",
-    "copyfiles": "copyfiles *.js audio/*.ogg *.html css/style.css img/galery/*.jpg img/sophie-cover-pictures/*.jpg img/*.jpg img/*.png Sophie-Lucke"
+    "copyfiles": "copyfiles *.js audio/*.ogg *.html css/style.css img/galery/*.jpg img/sophie-cover-pictures/*.jpg img/*.jpg img/*.png Sophie-Lucke",
+    "webpack:build": "webpack",
+    "deploy": "gh-pages -d Sophie-Lucke"
   },
   "browserslist": "last 10 versions",
   "author": "",
   "license": "ISC",
   "homepage": "https://github.com/iuriiGav/Sophie-Lucke",
   "devDependencies": {
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
     "node-sass": "^5.0.0",
-    "postcss": "^8.2.4"
+    "postcss": "^8.2.4",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.21.0",
+    "webpack-cli": "^4.5.0"
   },
   "dependencies": {
     "autoprefixer": "^10.2.4",
+    "flickity": "^2.2.2",
     "gh-pages": "^3.1.0",
     "jquery": "^3.5.1",
     "postcss-cli": "^8.3.1"

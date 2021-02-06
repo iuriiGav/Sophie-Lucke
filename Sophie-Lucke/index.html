@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sophie Lucke</title>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="js.js"></script> -->
+    <script src="https://iuriigav.github.io/Sophie-Lucke/dist/bundle.js"></script>
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
   </head>
   <body>
     <div class="container">
@@ -31,9 +33,9 @@
             <div class="mobile-nav__nav-container">
               <div class="mobile-nav__bg"></div>
               <div class="mobile-nav__button" tabindex="0">
-                <span class="mobile-nav__icon-bar"></span>
-                <span class="mobile-nav__icon-bar"></span>
-                <span class="mobile-nav__icon-bar"></span>
+                <span id="mobile-nav__icon-bar1" class="mobile-nav__icon-bar"></span>
+                <span id="mobile-nav__icon-bar2" class="mobile-nav__icon-bar"></span>
+                <span id="mobile-nav__icon-bar3" class="mobile-nav__icon-bar"></span>
               </div>
               <div class="mobile-nav__nav-content" tabindex="0">
                 <ul class="mobile-nav__nav-content--ul">
@@ -110,7 +112,7 @@
           </div>
         </div>
         <div class="hero__right">
-          <img src="img/sophie-cover-pictures/sophie-tall-crpoped.jpg" alt="" class="hero__right__cover-hero-mobile-img">
+          <img src="img/sophie-cover-pictures/sophie-tall-crpoped-minified.jpg" alt="" class="hero__right__cover-hero-mobile-img">
           <ul class="hero__right__navbar">
             <li class="hero__right__navbar--li navlink-active"><a href="https://iuriigav.github.io/Sophie-Lucke/">home</a></li>
             <li class="hero__right__navbar--li"><a href="https://iuriigav.github.io/Sophie-Lucke//concerts.html">concerts</a></li>
@@ -226,9 +228,19 @@
         <h2 class="watch-and-listen__header">WATCH AND LISTEN</h2>
 
         <div class="watch-and-listen__cd">
+
+          
+          <div class="watch-and-listen__cd--top-mobile" >
+            <img src="img/cd-1-front-minified.jpg" alt="Sophie gives a masterclass to young student" >
+            
+          </div>
+
           <div class="watch-and-listen__cd__left">
-            <img src="img/cd-1-back.jpg" alt="back of CD cover" class="watch-and-listen__cd--cover-back" />
-            <img src="img/cd-1-front.jpg" alt="front of CD cover displaying soloist walking in a prak" class="watch-and-listen__cd--cover-front" />
+            
+
+
+            <img src="img/cd-1-back-minified.jpg" alt="back of CD cover" class="watch-and-listen__cd--cover-back" />
+            <img src="img/cd-1-front-minified.jpg" alt="front of CD cover displaying soloist walking in a prak" class="watch-and-listen__cd--cover-front" />
           </div>
           <div class="watch-and-listen__cd__right">
             <h4 class="watch-and-listen__cd__right--cd-title">
@@ -258,9 +270,15 @@
 
 
         <div class="watch-and-listen__cd">
+
+          <div class="watch-and-listen__cd--top-mobile" >
+            <img src="img/cd-2-front-minified.jpg" alt="Sophie gives a masterclass to young student" >
+            
+          </div>
+
             <div class="watch-and-listen__cd__left">
-              <img src="img/cd-2-back.jpg" alt="back of CD cover" class="watch-and-listen__cd--cover-back" />
-              <img src="img/cd-2-front.jpg" alt="front of CD cover displaying soloist walking in a prak" class="watch-and-listen__cd--cover-front" />
+              <img src="img/cd-2-back-minified.jpg" alt="back of CD cover" class="watch-and-listen__cd--cover-back" />
+              <img src="img/cd-2-front-minified.jpg" alt="front of CD cover displaying soloist walking in a prak" class="watch-and-listen__cd--cover-front" />
             </div>
             <div class="watch-and-listen__cd__right">
               <h4 class="watch-and-listen__cd__right--cd-title">
@@ -299,9 +317,15 @@
             <p class="watch-and-listen__featured-youtube-video__p">
                 Thankful for ever.
             </p>
+            
+            <!-- <div class="youtube-placeholder-container">
+
+              <img style="width: 100%" src="img/youtube-placeholder.jpg" alt="youtube video of Sophie playing" class="youtube-placeholder">
+            </div> -->
 
             <div class="watch-and-listen__featured-youtube-video__youtube-video-embaded">
-                <iframe src="https://www.youtube.com/embed/kJ2izflpqhw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <iframe src="https://www.youtube.com/embed/kJ2izflpqhw"   srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/kJ2izflpqhw><img src=img/youtube-placeholder.jpg alt='Sophie playing bass'><span>▶</span></a>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
 
@@ -354,8 +378,8 @@
 
                     <div class="news__container__pictures">
                       <div class="carousel" data-flickity>
-                        <div class="carousel-cell"> <img src="img/IMG_8562.jpg" alt="Sophie gives a masterclass to young student" ></div>
-                        <div class="carousel-cell"> <img src="img/IMG_8561.jpg" alt="Sophie performs with a chamber group">  </div>
+                        <div class="carousel-cell"> <img src="img/IMG_8562-minified.jpg" alt="Sophie gives a masterclass to young student" ></div>
+                        <div class="carousel-cell"> <img src="img/IMG_8561-minified.jpg" alt="Sophie performs with a chamber group">  </div>
                         
                       </div>
                     </div>
@@ -402,7 +426,7 @@
                     </p>
 
                     <div class="news__container__youtube-video">
-                        <iframe class="news__container__youtube-video--iframe"  id="news__container__youtube-video--iframe" src="https://www.youtube.com/embed/kBriEcHUaM0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="news__container__youtube-video--iframe"  id="news__container__youtube-video--iframe" src="https://www.youtube.com/embed/kBriEcHUaM0" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/kBriEcHUaM0><img src=img/epos-placeholder.jpg alt='Sophie playing bass'><span>▶</span></a>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     </div>
 
@@ -559,5 +583,5 @@
      
     </div>
   </body>
-  <script defer src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <!-- <script defer src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
 </html>
