@@ -144,7 +144,7 @@ console.log($(this))
 $('.secondary-wrapper--bg1').on('click','.swiper-container--close', function() {
  
     $('#swiper-gallery-full-screen').fadeOut(300, function() { $(this).remove(); })
-    $('.galery').fadeIn();
+    $('.galery--full').fadeIn();
  
 })
 
@@ -166,7 +166,7 @@ const swiperGallery = `<div id="swiper-gallery-full-screen" class="swiper-modal"
     <div class="swiper-slide"><img src="img/galery/14344171_1278549982168783_6020645592251789313_n-minified.jpg" alt=""></div>
     <div class="swiper-slide"><img src="img/IMG_8561-minified.jpg" alt=""></div>
     <div class="swiper-slide"><img src="img/IMG_8562-minified.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/sophie-cover-pictures/sophie-tall-crpoped.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="img/sophie-cover-pictures/sophie-tall-crpoped-minified.jpg" alt=""></div>
     ...
   </div>
   <!-- If we need pagination -->
@@ -183,8 +183,10 @@ const swiperGallery = `<div id="swiper-gallery-full-screen" class="swiper-modal"
 
 
 $('.galery__container').on('click', function() {
-  $('.galery').fadeOut();
-  $(swiperGallery).hide().appendTo('.alternative-gallery-placeholder').fadeIn();
+  if($('.galery--full').length) {
+    $('.galery--full').fadeOut();
+    $(swiperGallery).hide().appendTo('.alternative-gallery-placeholder').fadeIn();
+  }
   
   
   
@@ -214,6 +216,9 @@ $('.galery__container').on('click', function() {
 
 
 })
+
+console.log('new info here')
+
 
 });
 
