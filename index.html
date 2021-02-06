@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sophie Lucke</title>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    <!-- <script src="js.js"></script> -->
-    <script src="dist/bundle.js"></script>
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="css/style.css" /> -->
+    <script src="https://iuriigav.github.io/Sophie-Lucke/dist/bundle.js"></script>
 
   </head>
   <body>
@@ -135,8 +135,13 @@
 
       </div>
       <div class="hero__audio-player">
-
-        <audio class="hidden hero__audio-player--player" controls id="linkAudio">
+        <div class="hero__audio-player__close-container">
+          <a href="" class="hero__audio-player__close-container--btn">
+            <sup>&times</sup>close player 
+          </a>
+        </div>
+        <audio class="hero__audio-player--player hidden" controls id="linkAudio">
+          <source src="audio/Sophie2satzfertig- (online-audio-converter.com).mp3" type="audio/mpeg">
           <source src="audio/Sophie2satzfertig-[AudioTrimmer.com].ogg" type="audio/ogg">
         Your browser does not support the audio element.
         </audio>
@@ -231,8 +236,14 @@
 
           
           <div class="watch-and-listen__cd--top-mobile" >
-            <img src="img/cd-1-front-minified.jpg" alt="Sophie gives a masterclass to young student" >
+            <img id="myImg" class="full-screen-image--img" src="img/cd-1-front-minified.jpg" alt="Sophie gives a masterclass to young student" >
             
+            <!-- The Modal -->
+<div id="myImg-myModal" class="full-screen-image-modal">
+  <span class="full-screen-image-close">&times;</span>
+  <img class="full-screen-image-modal-content" id="myImg-modal">
+</div>
+
           </div>
 
           <div class="watch-and-listen__cd__left">
@@ -272,7 +283,13 @@
         <div class="watch-and-listen__cd">
 
           <div class="watch-and-listen__cd--top-mobile" >
-            <img src="img/cd-2-front-minified.jpg" alt="Sophie gives a masterclass to young student" >
+            <img id="myImg-2" class="full-screen-image--img" src="img/cd-2-front-minified.jpg" alt="Sophie gives a masterclass to young student" >
+
+                        <!-- The Modal -->
+<div id="myImg-2-myModal" class="full-screen-image-modal">
+  <span class="full-screen-image-close">&times;</span>
+  <img class="full-screen-image-modal-content" id="myImg-2-modal">
+</div>
             
           </div>
 
@@ -378,9 +395,16 @@
 
                     <div class="news__container__pictures">
                       <div class="carousel" data-flickity>
-                        <div class="carousel-cell"> <img src="img/IMG_8562-minified.jpg" alt="Sophie gives a masterclass to young student" ></div>
-                        <div class="carousel-cell"> <img src="img/IMG_8561-minified.jpg" alt="Sophie performs with a chamber group">  </div>
-                        
+                        <div  class="carousel-cell"> <img id="news-img-1" class="full-screen-image--img" src="img/IMG_8562-minified.jpg" alt="Sophie gives a masterclass to young student" ></div>
+                        <div  class="carousel-cell"> <img id="news-img-2" class="full-screen-image--img" src="img/IMG_8561-minified.jpg" alt="Sophie performs with a chamber group">  </div>
+                      </div>
+                      <div id="news-img-1-myModal" class="full-screen-image-modal">
+                        <span class="full-screen-image-close">&times;</span>
+                        <img class="full-screen-image-modal-content" id="news-img-1-modal">
+                      </div>
+                      <div id="news-img-2-myModal" class="full-screen-image-modal">
+                        <span class="full-screen-image-close">&times;</span>
+                        <img class="full-screen-image-modal-content" id="news-img-2-modal">
                       </div>
                     </div>
 
@@ -541,16 +565,16 @@
 
         <div class="galery__container">
 
-            <div class="galery__container--large-image">
+            <div class="galery__container--large-image image-focus-grow">
                <!-- <img src="/img/galery/42A0934.jpg" alt="Sophie's portrait with double bass" class="galery__container--large-image-img"> -->
             </div>
-            <div class="galery__container--small-image1">
+            <div class="galery__container--small-image1 image-focus-grow">
                 <!-- <img src="/img/galery/14700745_10208929141558352_1767394398515383186_o.jpg" alt="Sophie with double bass" class="galery__container--small-image1-img"> -->
             </div>
-            <div class="galery__container--small-image2">
+            <div class="galery__container--small-image2 image-focus-grow">
                 <!-- <img src="/img/galery/IMG_3546.jpg" alt="Sophie with double bass" class="galery__container--small-image2-img"> -->
             </div>
-            <div class="galery__container--medium-image">
+            <div class="galery__container--medium-image image-focus-grow">
                 <!-- <img src="/img/galery/14344227_1278549945502120_5390873153939167157_n.jpg" alt="Sophie with double bass" class="galery__container--medium-image-img"> -->
 
             </div>
