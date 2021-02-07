@@ -1,134 +1,165 @@
 @import "../components/mixins.scss";
 
-
 .galery {
-    grid-column: full-start / full-end;
-  
-    background: linear-gradient(180.22deg, #59585D 0%, #19181a 100%);
-    height: 60%;
-    display: grid;
-    grid-template-rows: min-content min-content min-content;
-    grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
-    text-align: center;
-    &__header {
-      @include section-header(#f1f1f1);
-    }
+  grid-column: full-start / full-end;
 
-    &__container {
-        grid-column: col-start 2  / col-end 11;
-        height: 60vh;
-        @media only screen and (min-width: 1200px) {
-            & {
-                height: 80vh;
-            }
-          }
-        background: white;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-        display: grid;
-        grid-template-rows:repeat(9, [row-start] 1fr [row-end]);
+  background: linear-gradient(180.22deg, #59585d 0%, #19181a 100%);
+  height: 60%;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+  grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
+  text-align: center;
+  &__header {
+    @include section-header(#f1f1f1);
+  }
+
+  &__container {
+    position: relative;
+
+    grid-column: col-start 2 / col-end 11;
+    height: 60vh;
+    @media only screen and (min-width: 1200px) {
+      & {
+        height: 80vh;
+      }
+    }
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-rows: repeat(9, [row-start] 1fr [row-end]);
     grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
     column-gap: 1.3rem;
     row-gap: 1.3rem;
     margin-bottom: 10rem;
 
-        &--large-image {
-            // background: green;
-            grid-column: col-start 2  / col-end 5;
-            grid-row: row-start 2  / row-end 8;
-            overflow: hidden;
-            transition: all .3s;
-          
-          
-      
-@include background-image-galery('../img/galery/42A0934-minified.jpg') 
-        }
-        &--small-image1{
-            // background: yellow;
-            overflow: hidden;
-            grid-column: col-start 6  / col-end 8;
-            grid-row: row-start 2  / row-end 4;
-            @include background-image-galery('../img/galery/14700745_10208929141558352_1767394398515383186_o-minified.jpg');
-          
-      
-        }
+    &--large-image {
+      // background: green;
+      grid-column: col-start 2 / col-end 5;
+      grid-row: row-start 2 / row-end 8;
+      overflow: hidden;
+      transition: all 0.3s ease-in;
 
-        &--small-image2{
-            // background: blue;
-            overflow: hidden;
-            grid-column: col-start 9  / col-end 11;
-            grid-row: row-start 2  / row-end 4;
-   
-            @include background-image-galery('../img/galery/IMG_3546-minified.jpg') 
-        }
-
-        &--medium-image {
-            // background: pink;
-            overflow: hidden;
-            grid-column: col-start 6  / col-end 11;
-            grid-row: row-start 5  / row-end 8;
-            @include background-image-galery('../img/galery/14344227_1278549945502120_5390873153939167157_n-minified.jpg') 
-        }
-
-        &--see-all-btn {
-            // background: red;
-            overflow: hidden;
-            grid-column: col-start 2  / col-end 12;
-            grid-row: row-start 9  / row-end 10;
-        }
-
-
-
-
-
-
-        ///////////////////////////////
-        /////////change galery////////
-
-        @media only screen and (max-width: 770px) {
-            &--large-image {
-                // background: green;
-                grid-column: col-start 2  / col-end 6;
-                grid-row: row-start 5  / row-end 8;
-                overflow: hidden;
-                transition: all .3s;
-              
-              
-          
-    @include background-image-galery('../img/galery/42A0934-minified.jpg') 
-            }
-            &--small-image1{
-                // background: yellow;
-                overflow: hidden;
-                grid-column: col-start 2  / col-end 11;
-                grid-row: row-start 2  / row-end 4;
-                @include background-image-galery('../img/sophie-bg-pages-minified.jpg');
-              
-          
-            }
-    
-            &--small-image2{
-                display: none;
-            }
-    
-            &--medium-image {
-                // background: pink;
-                overflow: hidden;
-                grid-column: col-start 7   / col-end 11;
-                grid-row: row-start 5  / row-end 8;
-                @include background-image-galery('../img/galery/14700745_10208929141558352_1767394398515383186_o-minified.jpg') 
-            }
-    
-            &--see-all-btn {
-                // background: red;
-                overflow: hidden;
-                grid-column: col-start 2  / col-end 12;
-                grid-row: row-start 9  / row-end 10;
-            }
-        }
+      @include background-image-galery("../img/galery/42A0934-minified.jpg");
+    }
+    &--small-image1 {
+      // background: yellow;
+      overflow: hidden;
+      grid-column: col-start 6 / col-end 8;
+      grid-row: row-start 2 / row-end 4;
+      transition: all 0.3s ease-in;
+      @include background-image-galery(
+        "../img/galery/14700745_10208929141558352_1767394398515383186_o-minified.jpg"
+      );
     }
 
+    &--small-image2 {
+      // background: blue;
+      overflow: hidden;
+      grid-column: col-start 9 / col-end 11;
+      grid-row: row-start 2 / row-end 4;
+      transition: all 0.3s ease-in;
 
+      @include background-image-galery("../img/galery/IMG_3546-minified.jpg");
+    }
+
+    &--medium-image {
+      // background: pink;
+      overflow: hidden;
+      grid-column: col-start 6 / col-end 11;
+      grid-row: row-start 5 / row-end 8;
+      transition: all 0.3s ease-in;
+      @include background-image-galery(
+        "../img/galery/14344227_1278549945502120_5390873153939167157_n-minified.jpg"
+      );
+    }
+
+    &--see-all-btn {
+      // background: red;
+      overflow: hidden;
+      grid-column: col-start 2 / col-end 12;
+      grid-row: row-start 9 / row-end 10;
+    }
+
+    ///////////////////////////////
+    /////////change galery////////
+
+    @media only screen and (max-width: 770px) {
+      &--large-image {
+        // background: green;
+        grid-column: col-start 2 / col-end 6;
+        grid-row: row-start 5 / row-end 8;
+        overflow: hidden;
+        transition: all 0.3s ease-in;
+
+        @include background-image-galery("../img/galery/42A0934-minified.jpg");
+      }
+      &--small-image1 {
+        // background: yellow;
+        overflow: hidden;
+        grid-column: col-start 2 / col-end 11;
+        grid-row: row-start 2 / row-end 4;
+        @include background-image-galery("../img/sophie-bg-pages-minified.jpg");
+      }
+
+      &--small-image2 {
+        display: none;
+      }
+
+      &--medium-image {
+        // background: pink;
+        overflow: hidden;
+        grid-column: col-start 7 / col-end 11;
+        grid-row: row-start 5 / row-end 8;
+        @include background-image-galery(
+          "../img/galery/14700745_10208929141558352_1767394398515383186_o-minified.jpg"
+        );
+      }
+
+      &--see-all-btn {
+        // background: red;
+        overflow: hidden;
+        grid-column: col-start 2 / col-end 11;
+        grid-row: row-start 9 / row-end 10;
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////@include
+/////////////////////////alternative slider gallery
+
+.gallery-slider {
+  grid-column: full-start / full-end;
+
+  background: linear-gradient(180.22deg, #59585d 0%, #19181a 100%);
+  height: 1000px;
+  text-align: center;
+  &__header {
+    @include section-header(#f1f1f1);
+  }
+
+  &__container {
+    position: relative;
+    width: 80%;
+    height: 500px;
+    background: white;
+    margin: 0 auto;
+  }
 }
 
 
+// .carousel-cell--gallery {
+//   width: 50%;
+//   // height: 100%;
+//   margin-right: 0;
+//   border-radius: 5px;
+//   counter-increment: gallery-cell;
+// }
 
+
+
+
+
+
+
+  

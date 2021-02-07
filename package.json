@@ -8,7 +8,8 @@
     "prefix:css": "postcss css/style.css --use autoprefixer -o css/style.css",
     "copyfiles": "copyfiles *.js audio/*.ogg *.html css/style.css img/galery/*.jpg img/sophie-cover-pictures/*.jpg img/*.jpg img/*.png Sophie-Lucke",
     "webpack:build": "webpack",
-    "deploy": "gh-pages -d Sophie-Lucke"
+    "deploy": "gh-pages -d Sophie-Lucke",
+    "build:local": "npm run prefix:css && npm run webpack:build && npm run copyfiles"
   },
   "browserslist": "last 10 versions",
   "author": "",
@@ -29,6 +30,7 @@
     "flickity": "^2.2.2",
     "gh-pages": "^3.1.0",
     "jquery": "^3.5.1",
-    "postcss-cli": "^8.3.1"
+    "postcss-cli": "^8.3.1",
+    "swiper": "^6.4.11"
   }
 }
