@@ -179,5 +179,6 @@
   margin-right: 10px;
   border-radius: 5px;
   counter-increment: gallery-cell;
-  display: flex;
+  display: flex;  
+  align-items: flex-start;
 }
