@@ -3,42 +3,35 @@ $(document).ready(function () {
  
 
   $(".hero__sidebar__listen-now--btn").on("click", function (e) {
-    if ($(".hero__audio-player--player").css("display") == "none") {
-      $(".hero__audio-player--player").fadeIn(300);
-      $(".hero__audio-player__close-container--btn").css(
+    if ($(".hero-audioplayer--player").css("display") == "none") {
+      $(".hero-audioplayer--player").fadeIn(300);
+      $(".hero-audioplayer--close-btn").css(
         "visibility",
         "visible"
       );
-      $(".hero__audio-player__close-container--btn").css("opacity", ".5");
+      $(".hero-audioplayer--close-btn").css("opacity", ".5");
     }
     e.preventDefault();
-    $(".hero__audio-player--player").removeClass("hidden");
-    $(".hero__audio-player--player")[0].play();
-    $(".hero__audio-player__close-container--btn").css("visibility", "visible");
-    $(".hero__audio-player__close-container--btn").css("opacity", ".5");
+    $(".hero-audioplayer--player").removeClass("hidden");
+    $(".hero-audioplayer--player")[0].play();
+    $(".hero-audioplayer--close-btn").css("visibility", "visible");
+    $(".hero-audioplayer--close-btn").css("opacity", ".5");
 
     $("a").attr("target", "_blank");
   });
-  // $("audio").on({
-  //   pause: function () {
-  //     setTimeout(function () {
-  //       $(".hero__audio-player--player").fadeOut("slow");
-  //       $("a").removeAttr("target");
-  //     }, 500);
-  //   },
-  // });
 
-  $(".hero__audio-player__close-container--btn").click(function (e) {
+
+  $(".hero-audioplayer--close-btn").click(function (e) {
     e.preventDefault();
     setTimeout(function () {
-      $(".hero__audio-player--player")[0].pause();
-      $(".hero__audio-player--player").fadeOut(300);
+      $(".hero-audioplayer--player")[0].pause();
+      $(".hero-audioplayer--player").fadeOut(300);
       $("a").removeAttr("target");
-      $(".hero__audio-player__close-container--btn").css(
+      $(".hero-audioplayer--close-btn").css(
         "visibility",
         "hidden"
       );
-      $(".hero__audio-player__close-container--btn").css("opacity", "0");
+      $(".hero-audioplayer--close-btn").css("opacity", "0");
     }, 500);
   });
 
@@ -49,12 +42,12 @@ $(document).ready(function () {
   $(".bio__content__lang-btns-container--btn-de").on("click", function (e) {
     e.preventDefault();
     if (
-      $(this).hasClass("bio__content__lang-btns-container--btn--not-active")
+      $(this).hasClass("biography-choose-lang-btn--not-active")
     ) {
-      $(this).removeClass("bio__content__lang-btns-container--btn--not-active");
-      $(this).addClass("bio__content__lang-btns-container--btn--active");
+      $(this).removeClass("biography-choose-lang-btn--not-active");
+      $(this).addClass("biography-choose-lang-btn--active");
       $(".bio__content__lang-btns-container--btn-en").removeClass(
-        "bio__content__lang-btns-container--btn--active"
+        "biography-choose-lang-btn--active"
       );
 
       $(".bio__content--GERMAN").hide().removeClass("hidden").fadeIn("slow");
@@ -62,7 +55,7 @@ $(document).ready(function () {
       $(".bio__content--ENGLISH").addClass("hidden");
 
       $(".bio__content__lang-btns-container--btn-en").addClass(
-        "bio__content__lang-btns-container--btn--not-active"
+        "biography-choose-lang-btn--not-active"
       );
     }
   });
@@ -70,17 +63,17 @@ $(document).ready(function () {
   $(".bio__content__lang-btns-container--btn-en").on("click", function (e) {
     e.preventDefault();
     if (
-      $(this).hasClass("bio__content__lang-btns-container--btn--not-active")
+      $(this).hasClass("biography-choose-lang-btn--not-active")
     ) {
-      $(this).removeClass("bio__content__lang-btns-container--btn--not-active");
-      $(this).addClass("bio__content__lang-btns-container--btn--active");
+      $(this).removeClass("biography-choose-lang-btn--not-active");
+      $(this).addClass("biography-choose-lang-btn--active");
       $(".bio__content__lang-btns-container--btn-de").removeClass(
-        "bio__content__lang-btns-container--btn--active"
+        "biography-choose-lang-btn--active"
       );
       $(".bio__content--ENGLISH").hide().removeClass("hidden").fadeIn("slow");
       $(".bio__content--GERMAN").addClass("hidden");
       $(".bio__content__lang-btns-container--btn-de").addClass(
-        "bio__content__lang-btns-container--btn--not-active"
+        "biography-choose-lang-btn--not-active"
       );
     }
   });
@@ -141,7 +134,7 @@ console.log($(this))
  
 
   
-$('.secondary-wrapper--bg1').on('click','.swiper-container--close', function() {
+$('.statick-event-listener').on('click','.swiper-container--close', function() {
  
     $('#swiper-gallery-full-screen').fadeOut(300, function() { $(this).remove(); })
     $('.galery--full').fadeIn();
@@ -176,8 +169,7 @@ const swiperGallery = `<div id="swiper-gallery-full-screen" class="swiper-modal"
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
+
 </div>
 </div>`
 
