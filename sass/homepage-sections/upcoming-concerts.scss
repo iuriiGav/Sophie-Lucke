@@ -1,6 +1,7 @@
 @import "../components/mixins.scss";
 
-.upcoming-concerts {
+
+.upcoming-concerts-section-container {
   grid-column: full-start / full-end;
   background-color: #f3f3f3;
   height: auto;
@@ -9,186 +10,20 @@
   grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
   // column-gap: 3rem;
   text-align: center;
-
-  &__header {
-    @include section-header(#5c5a60);
-    margin-bottom: -3rem;
-
-  
-  }
-
-  &__info {
-    margin: 3rem 0;
-    grid-column: col-start 3 / col-end 10;
-    min-height: 23rem;
-    border-radius: 3px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 30% 70%;
-    padding: 3rem;
-    position: relative;
-  
- 
-    &__left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-right: 2px dashed #dadde6;
-      &--date {
-        @include typography-ticket-left(3.6rem);
-      }
-      &--time {
-        @include typography-ticket-left(3.6rem);
-      }
-      &--city {
-        @include typography-ticket-left(2.3rem);
-      }
-
-      
-    }
-
-    &__right {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      min-width: 80%;
-      margin: 0 auto;
-      &--concerthall {
-        @include typography-ticket-left(3.6rem);
-      }
-
-      &--piece {
-        @include typography-ticket-left(4.8rem);
-        &--span {
-          font-size: 2.3rem;
-        }
-      }
-    }
-
-
-
-
-    @media only screen and (max-width: 970px) {
-      
-      & {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-
-       &__left {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-right: none;
-        margin-bottom: 2rem;
-
-        &--date {
-          @include typography-ticket-left(2.6rem);
-          margin-right: 2rem;
-          padding-right: 2rem;
-          border-right: solid 2px #dadde6;
-        }
-        &--time {
-          @include typography-ticket-left(2.6rem);
-          margin-right: 2rem;
-          padding-right: 2rem;
-          border-right: solid 2px #dadde6;
-        }
-        &--city {
-          @include typography-ticket-left(2.6rem);
-        }
-  
-        
-      }
-  
-
-
-      &__right {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        min-width: 80%;
-        margin: 0 auto;
-        &--concerthall {
-          @include typography-ticket-left(2.6rem);
-        }
-  
-        &--piece {
-          @include typography-ticket-left(2.8rem);
-          &--span {
-            font-size: 2.3rem;
-          }
-        }
-      }
-      }
-    }
-
-
-    @media only screen and (max-width: 460px) {
-      
-      & {
-        grid-column: col-start 2 / col-end -2;
-      
-      
-
-       &__left {
-      
-
-        &--date {
-
-          font-size: 2rem;
-          
-        }
-        &--time {
-          font-size: 2rem;
-        }
-        &--city {
-          font-size: 2rem;
-        }
-  
-        
-      }
-  
-
-
-      &__right {
-      
-        &--concerthall {
-       font-size: 2.2rem;
-        }
-  
-        &--piece {
-          font-size: 2.2rem;
-          &--span {
-            font-size: 1.6rem;
-          }
-        }
-      }
-      }
-    }
-
-  }
-
-  &__buttons {
-    grid-column: col-start 3 / -3;
-    display: flex;
-    justify-content: space-between;
-    // background-color: black;
-    height: auto;
-    text-align: center;
-    margin-bottom: 12rem;
-    
-    
-  }
-
   @media only screen and (max-width: 460px) {
 
     & {
       margin-bottom: -7rem;
     }
   }
+}
+
+
+.upcoming-concerts__btn-container {
+  grid-column: col-start 3 / -3;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  text-align: center;
+  margin-bottom: 12rem;   
 }

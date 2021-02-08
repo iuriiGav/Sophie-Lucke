@@ -67,10 +67,7 @@ $tabs-base-color: white;
           transform: translateY(-2px);
         }
 
-        &:active,
-        &:focus {
-        //  outline-color: green;
-        }
+       
       }
 
 
@@ -117,13 +114,3 @@ $tabs-base-color: white;
   }
 }
 
-.btn-large-gold--show-bio {
-
-  z-index: 10;
-  position: absolute;
-  top: 80rem;
-  right: 0rem;
-  padding: 1.5rem 6rem;
-  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
-
-}

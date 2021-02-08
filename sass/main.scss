@@ -6,15 +6,18 @@
 @import "./components/mixins";
 @import "./homepage-sections/hero";
 @import "./homepage-sections/upcoming-concerts";
-@import "./homepage-sections/watch-and-listen";
-@import "./homepage-sections/news";
 @import "./components/utils";
 @import "./homepage-sections/bio-and-galery";
 @import "./homepage-sections/galery";
 @import "./concerts-page/concerts-page";
-@import "./biography-page/biography-page";
 @import "./media/records";
 @import "./media/news";
+@import "./components/typography";
+@import "./components/containers";
+@import "./components/buttons.scss";
+@import "./components/backgrounds";
+@import "./components/logo";
+@import "./components/navbars";
 // @import "../jsplugins/flickity.min.css";
 
 
@@ -26,8 +29,8 @@
 
 //typography
 
---text-source-sans: "Source Sans Pro", sans-serif;
---text-raleway: Raleway, sans-serif;
+// --text-source-sans: "Source Sans Pro", sans-serif;
+// --text-raleway: Raleway, sans-serif;
 }
 
 

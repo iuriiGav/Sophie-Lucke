@@ -3,8 +3,10 @@
     font-weight: 600;
     font-size: $font-size;
     color: #5f5f5f;
-  }
+  }//remove later when because tured into class
   
+
+  //revrite section header into class
   @mixin section-header($color) {
     margin-top: 3rem;
     grid-column: col-start 1 / -1;
@@ -28,7 +30,7 @@
     }
   }
 
-  @mixin main-container-grid {
+  @mixin main-container-grid { //remove after rearange
     display: grid;
     grid-template-rows: 1fr min-content repeat(5, min-content);
     grid-template-columns:
@@ -38,7 +40,7 @@
 
   @mixin twelve-col-grid {
     display: grid;
-    grid-template-rows: min-content min-content min-content;
+    // grid-template-rows: min-content min-content min-content;
     grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
   }
   @mixin background-image-galery($url) {

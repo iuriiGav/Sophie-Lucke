@@ -1,0 +1,51 @@
+.logo {
+    &__brand {
+      font-family: var(--text-source-sans);
+      font-style: normal;
+      font-weight: 600;
+      color: #eee;
+      cursor: pointer;
+      &--hero-section {
+        font-size: 5rem;
+        margin-top: 2rem; //
+      }
+  
+      &--general {
+        font-size: 4rem;
+        @media only screen and (max-width: 800px) {
+          margin-left: 26px;
+        }
+        @media only screen and (max-width: 360px) {
+          font-size: 3.6em;
+          margin-left: 12px;
+        }
+      }
+    }
+  
+  
+    &__subtext {
+      font-family: var(--text-raleway);
+      display: inline-block; //check if doesn't make problems, belongs to hero
+      font-style: normal;
+      font-weight: 600;
+      color: var(--text-gold);
+      &--hero-section {
+        font-size: 2.6rem;
+        margin-top: -3rem;
+      padding: 2rem;
+      }
+  
+      &--general {
+        font-size: 3rem;
+        margin-top: -2rem;
+        @media only screen and (max-width: 360px) {
+          font-size: 2.4em;
+        }
+      }
+    }
+  }
+
+  .hero-logo__wrapper {
+    height: 70%;
+}
+  

@@ -1,417 +1,97 @@
 @import "../components/mixins";
+@import "../components/typography";
 
 // container__concerts
 
-.secondary-wrapper {
- 
- 
-  &--img--img {
-      width: 100%;
+.container__content--page-concerts {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  @media only screen and (max-width: 970px) {
+    & {
+      width: 80%;
+      margin: 0 auto;
+    }
   }
-&--content{
+  @media only screen and (max-width: 470px) {
+    & {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.event-container {
+  margin: 3rem 0;
+  border-radius: 3px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 30% 70%;
+  position: relative;
+
+  @media only screen and (max-width: 970px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &--concerts-page {
+    min-height: 17rem;
+  }
+
+  &--homepage {
+    grid-column: col-start 3 / col-end 10;
+    min-height: 23rem;
+    grid-auto-flow: column;
+    padding: 3rem;
+    @media only screen and (max-width: 970px) {
+      grid-column: col-start 2 / col-end -2;
+
+    }
+  }
+  &--past {
+    opacity: 0.7;
+  }
+}
+
+.event-date-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px dashed #dadde6;
+
+  @media only screen and (max-width: 970px) {
+    & {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-right: none;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.event-description-container {
+  min-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+
+  @media only screen and (max-width: 970px) {
     text-align: center;
-    width: 60%;
-    margin: 0 auto;
-    @media only screen and (max-width: 970px) {
-      & {
-        width: 80%;
-        margin: 0 auto;
-      }
-    }
-    @media only screen and (max-width: 470px) {
-      & {
-        width: 90%;
-        margin: 0 auto;
-      }
-    }
-}
-  &--header {
-    @include section-header(#5c5a60);
-    margin-top: 5rem;
-    color: #f3f3f3ea;
-    font-size: 4.6rem;
-    height: 10rem;
-    @media only screen and (max-width: 970px) {
-      & {
-        margin-top: 6rem;
-        font-size: 5.4rem;
-      }
-    }
-    @media only screen and (max-width: 460px) {
-
-      & {
-        font-size: 3.3rem;
-        margin-top: 3rem;
-        margin-bottom: -5rem;
-      }
-    }
-   
   }
-
-&--info-container {
-    margin: 3rem 0;
-    min-height: 17rem;
-    border-radius: 3px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 30% 70%;
-    // padding: 3rem;
-    position: relative;
-    &__left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-right: 2px dashed #dadde6;
-      &--date {
-        @include typography-ticket-left(2rem);
-      }
-      &--time {
-        @include typography-ticket-left(2.3rem);
-      }
-      &--city {
-        @include typography-ticket-left(2rem);
-      }
-    }
-
-    &__right {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      justify-content: center;
-      min-width: 80%;
-      margin: 0 auto;
-      &--concerthall {
-        @include typography-ticket-left(2rem);
-      }
-
-      &--piece {
-        @include typography-ticket-left(3rem);
-        &--span {
-          font-size: 2.3rem;
-        }
-      }
-      &--see-more-btn {
-        color: #dd9323;
-        display: inline-block;
-        font-family: Lato;
-        font-size: 2rem;
-        align-self: flex-start;
-        margin-top: 1rem;
-        // padding: 0 5rem;
-
-        &:hover {
-          letter-spacing: .1rem;
-          transform: scale(1.05);
-        }
-
-        &:active, &:focus {
-        
-          transform: translateY(2px);
-        }
-      }
-    }
-
-
-
-
-    @media only screen and (max-width: 970px) {
-      
-      & {
-      
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-
-
-       &__left {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-right: none;
-        margin-bottom: 2rem;
-
-        &--date {
-          @include typography-ticket-left(2.6rem);
-          margin-right: 2rem;
-          padding-right: 2rem;
-          border-right: solid 2px #dadde6;
-        }
-        &--time {
-          @include typography-ticket-left(2.6rem);
-          margin-right: 2rem;
-          padding-right: 2rem;
-          border-right: solid 2px #dadde6;
-        }
-        &--city {
-          @include typography-ticket-left(2.6rem);
-        }
-  
-        
-      }
-  
-
-
-      &__right {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        min-width: 80%;
-        margin: 0 auto;
-        &--concerthall {
-          @include typography-ticket-left(2.6rem);
-        }
-  
-        &--piece {
-          @include typography-ticket-left(2.8rem);
-          &--span {
-            font-size: 2.3rem;
-          }
-        }
-      }
-      }
-    }
-
-
-    @media only screen and (max-width: 460px) {
-      
-      & {
-      
-      
-
-       &__left {
-      
-
-        &--date {
-
-          font-size: 2rem;
-          
-        }
-        &--time {
-          font-size: 2rem;
-        }
-        &--city {
-          font-size: 2rem;
-        }
-  
-        
-      }
-  
-
-
-      &__right {
-      
-        &--concerthall {
-       font-size: 2.2rem;
-        }
-  
-        &--piece {
-          font-size: 2.2rem;
-          &--span {
-            font-size: 1.6rem;
-          }
-        }
-      }
-      }
-    }
 }
 
-
-
-
-
-
-
-
-
-
-//past 
-
-&--header--past {
-    margin-top: 3rem;
-    color: #f3f3f3;
-    font-family:var(--text-source-sans);
-    font-weight: 600;
-    font-size: 4rem;
-    opacity: .87;
-    display: inline-block;
-    // height: 10rem;
-   
+.event-description-container--homepage {
+  @media only screen and (max-width: 460px) {
+    grid-column: col-start 2 / col-end -2;
   }
-
-&--info-container--past {
-    margin: 3rem 0;
-    min-height: 17rem;
-    border-radius: 3px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    opacity: .7;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 30% 70%;
-    // padding: 3rem;
-    position: relative;
-    &__left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-right: 2px dashed #dadde6;
-      &--date {
-        @include typography-ticket-left(2rem);
-      }
-      &--time {
-        @include typography-ticket-left(2.3rem);
-      }
-      &--city {
-        @include typography-ticket-left(2rem);
-      }
-    }
-
-    &__right {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      justify-content: center;
-      min-width: 80%;
-      margin: 0 auto;
-      &--concerthall {
-        @include typography-ticket-left(2rem);
-      }
-
-      &--piece {
-        @include typography-ticket-left(3rem);
-        &--span {
-          font-size: 2.3rem;
-        }
-      }
-      &--see-more-btn {
-        color: #dd9323;
-        display: inline-block;
-        font-family: Lato;
-        font-size: 2rem;
-        align-self: flex-start;
-        margin-top: 1rem;
-        // padding: 0 5rem;
-
-        &:hover {
-          letter-spacing: .1rem;
-          transform: scale(1.05);
-        }
-
-        &:active, &:focus {
-        
-          transform: translateY(2px);
-        }
-      }
-    }
-    @media only screen and (max-width: 970px) {
-      
-      & {
-      
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-
-
-       &__left {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-right: none;
-        margin-bottom: 2rem;
-
-        &--date {
-          @include typography-ticket-left(2.6rem);
-          margin-right: 2rem;
-          padding-right: 2rem;
-          border-right: solid 2px #dadde6;
-        }
-        &--time {
-          @include typography-ticket-left(2.6rem);
-          margin-right: 2rem;
-          padding-right: 2rem;
-          border-right: solid 2px #dadde6;
-        }
-        &--city {
-          @include typography-ticket-left(2.6rem);
-        }
-  
-        
-      }
-  
-
-
-      &__right {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        min-width: 80%;
-        margin: 0 auto;
-        &--concerthall {
-          @include typography-ticket-left(2.6rem);
-        }
-  
-        &--piece {
-          @include typography-ticket-left(2.8rem);
-          &--span {
-            font-size: 2.3rem;
-          }
-        }
-      }
-      }
-    }
-
-
-    @media only screen and (max-width: 460px) {
-      
-      & {
-      
-      
-
-       &__left {
-      
-
-        &--date {
-
-          font-size: 2rem;
-          
-        }
-        &--time {
-          font-size: 2rem;
-        }
-        &--city {
-          font-size: 2rem;
-        }
-  
-        
-      }
-  
-
-
-      &__right {
-      
-        &--concerthall {
-       font-size: 2.2rem;
-        }
-  
-        &--piece {
-          font-size: 2.2rem;
-          &--span {
-            font-size: 1.6rem;
-          }
-        }
-      }
-      }
-    }
 }
-
-
-
-}
-
-
