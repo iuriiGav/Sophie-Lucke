@@ -1,0 +1,35 @@
+include ../mixins/_mixins.pug 
+   
+.grid-container-12-col.text-center.background--lightest
+    h2.section-header.section-header--dark News and thoughts
+    .grid-container-12-col--home-page
+        +news-card-dark('Januar 2020')
+            p.news-content__text Let´s start again…  
+        +news-card-light('Januar 2020')
+            p.news-content__text    …just came back from Sarajevo, an absolutely remarkable City. Of course not only in terms of history and religion, even more because of the  open heart of the people and such nice welcoming and interest of the music students. <br> here some little impressions:
+            .carousel(data-flickity='')
+                .carousel-cell
+                    img#news-img-1.full-screen-image--img(src='/img/IMG_8562-minified.jpg' alt='Sophie gives a masterclass to young student')
+                .carousel-cell
+                    img#news-img-2.full-screen-image--img(src='/img/IMG_8561-minified.jpg' alt='Sophie performs with a chamber group')
+            #news-img-1-myModal.full-screen-image-modal
+                span.full-screen-image-close &times;
+                img#news-img-1-modal.full-screen-image-modal-content
+            #news-img-2-myModal.full-screen-image-modal
+                span.full-screen-image-close &times;
+                img#news-img-2-modal.full-screen-image-modal-content
+
+        
+        +news-card-dark('Januar 2020')
+            p.news-content__text dankbar, bereichert, inspiriert und positiv ersch&ouml;pft zur&uuml;ck von den Tagen der Neuen Musik und &uuml;berw&auml;ltigen Konzerten in Bamberg&mldr; hier ist aus TV und Radio Beitr&auml;gen folgendes &uuml;brig geblieben:
+            a.simple-link(href='https://www.br-klassik.de/audio/interview-mit-kontrabassistin-sophie-luecke-100.html' target='_blank') https://www.br-klassik.de/audio/interview-mit-kontrabassistin-sophie-luecke-100.html
+
+
+
+
+        +news-card-light('Januar 2020')
+            p.news-content__text Schaut euch diesen Sommer den EPOS Orchestra in Montreux an:
+            .youtube-video__container
+                iframe#news__container__youtube-video--iframe.youtube-video--centered(src='https://www.youtube.com/embed/kBriEcHUaM0' srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/kBriEcHUaM0><img src=/img/news-youtube-image-placeholder-minified.png alt='Sophie playing bass'><span>▶</span></a>" frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+            p.news-content__text Ich freue mich sehr darauf, im Sommer 2018 wieder mit EPOS zu spielen &mldr;
+        a.mb-small.btn-large-gold(href='https://iuriigav.github.io/Sophie-Lucke/media-news.html') SEE ALL NEWS

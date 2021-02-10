@@ -1,0 +1,27 @@
+#hero.hero
+    .hidden-navbar
+        include ../includes/_nav-general.pug
+    .hero__sidebar 
+        .hero-logo__wrapper
+            h1.logo__brand.logo__brand--hero-section SOPHIE L&Uuml;CKE
+            h2.logo__subtext.logo__subtext--hero-section kontrabass &deg; double bass
+        .hero__sidebar__listen-now
+            h3.hero__sidebar__listen-now--heading &bdquo;Schubert a-Moll Sonate, <br> 2.Satz&ldquo;
+            .hero__sidebar__listen-now--performer
+                p.hero__sidebar__listen-now--performer--bass Sophie L&uuml;cke - Kontrabass
+                p.hero__sidebar__listen-now--performer--piano Tomoko Nishikawa - Klavier
+                a.hero__sidebar__listen-now--btn(href='#') Play now
+            img.hero__sidebar__listen-now--image(src='img/sophie-wo-bg.png' alt='Sophie playing recital')
+
+    .hero__right
+        img.hero__right__cover-hero-mobile-img(src='img/sophie-cover-pictures/sophie-tall-crpoped-minified.jpg' alt='')
+        include ../includes/_navbar-large.pug
+.hero-audioplayer
+    .hero-audioplayer__close-btn-container
+        a.hero-audioplayer--close-btn(href='')
+            sup &amp;times close player
+    audio#linkAudio.hero-audioplayer--player.hidden(controls='')
+        source(src='/audio/Sophie2satzfertig- (online-audio-converter.com).mp3' type='audio/mpeg')
+        source(src='/audio/Sophie2satzfertig-[AudioTrimmer.com].ogg' type='audio/ogg')
+        |Your browser does not support the audio element.
+

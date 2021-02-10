@@ -1,0 +1,12 @@
+include ../mixins/_mixins.pug
+
+
+
+.upcoming-concerts-section-container
+    h2.section-header.section-header--dark.mb-n3 UPCOMING CONCERTS
+    +upcoming-concert('18 Februar','19:00', "München", "Bayerische Staatsoper", 'Carmen | Gastsolobass','', "https://www.staatsoper.de/")
+    +upcoming-concert('1 März','20:00', "München", "Staatstheater am Gärtnerplatz", 'Rigoletto | Solobass', ' (premiere)', "https://www.staatsoper.de/")
+    +upcoming-concert('18 Februar','19:00', "München", "Bayerische Staatsoper", 'Carmen | Gastsolobass','', "https://www.staatsoper.de/")
+    .upcoming-concerts__btn-container
+        a.btn-large-dark(href='https://iuriigav.github.io/Sophie-Lucke/concerts.html#past-concerts') PREVIOUS CONCERTS
+        a.btn-large-gold(href='https://iuriigav.github.io/Sophie-Lucke/concerts.html') SEE ALL CONCERTS

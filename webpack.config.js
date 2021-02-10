@@ -11,7 +11,7 @@ const pug = {
 
 const config = {
     entry: './app.js',
-    // mode: 'production',
+    mode: 'development',
     output: {
       path: `${__dirname}/dist`,
       filename: 'bundle.js',
@@ -43,10 +43,15 @@ const config = {
       },
       plugins: [
         new HtmlWebpackPlugin({
-          filename: 'html-from-pug/index.html',
+          filename: 'test-pug/index.html',
           template: 'pug-src/index.pug',
           inject: false
-        })
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'test-pug/index.html',
+          template: 'pug-src/index.pug',
+          inject: false
+        }),
      ]
 
     }

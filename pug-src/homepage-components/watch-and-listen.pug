@@ -1,0 +1,37 @@
+include ../mixins/_mixins.pug
+
+
+.watch-and-listen.background--dark.text-center.grid-container-12-col.grid-container-12-col--homepage-records
+    h2.section-header.section-header--light WATCH AND LISTEN
+    
+    - const performers1 = ['Barbara Höfling, Sopran', 'Helios Quartet', 'Sophie Lücke, Kontrabass']
+    - const performers2 = ['Markus Elsner, Dirigent', 'Thérèse Wincent, Soprano', 'Peter Schöne, Baritone', 'Ensemble Zeitsprung']
+    
+    +cd-homepage('/img/cd-1-front-minified.jpg', 
+                'cd-cover-image', 
+                '/img/cd-1-back-minified.jpg', 
+                'back of CD cover', 
+                '/img/cd-1-front-minified.jpg', 
+                'front of CD cover displaying soloist walking in a prak', 
+                'DES TODES TOD', 
+                'Werke von Gustav Mahler, Modest Mussorgsky und Paul Hindemith', 
+                performers1, 
+                '2014, Hannover', 
+                'https://www.amazon.de/Todes-Tod-Liederzyklen-Barbara-H%C3%B6fling/dp/B00UW6AFFC')
+    +cd-homepage('/img/cd-2-front-minified.jpg', 
+                'cd-cover-image', 
+                '/img/cd-2-back-minified.jpg', 
+                'back of CD cover', 
+                '/img/cd-2-front-minified.jpg', 
+                'front of CD cover abstract image', 
+                'Johannes X. Schachtner', 
+                'Works For Ensemble', 
+                performers2, 
+                '2016, München', 
+                'https://www.amazon.de/Works-Ensemble-Zeitsprung/dp/B01J2K34R4')
+    .youtube-feature__container--homepage
+        h3.youtube-feature__header In Memory of my great Teacher
+        h2.youtube-feature__subheader Rinat Ibragimov<br>(1960-2020)
+        p.youtube-feature__text Thankful for ever.
+        .youtube-feature__video-wrapper
+            iframe.youtube-feature__video-content(src='https://www.youtube.com/embed/kJ2izflpqhw' srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white !important;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/kJ2izflpqhw><img src=/img/sophie-playong-youtube-placeholder-minified.jpg alt='Sophie playing bass'><span>▶</span></a>" frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')

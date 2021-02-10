@@ -1,0 +1,48 @@
+mixin upcoming-concert(date, time, city, concertHall, piece, spanText, href)
+    .event-container.event-container--homepage
+        .event-date-container
+            p.text-primary-semibold__dark.text-primary-semibold__dark--large= date
+            p.text-primary-semibold__dark.text-primary-semibold__dark--large= time
+            p.text-primary-semibold__dark.text-primary-semibold__dark--medium.text-primary-semibold__dark--no-border= city
+
+        .event-description-container.event-description-container--homepage
+            h4.text-primary-semibold__dark.text-primary-semibold__dark--concerthall--homepage= concertHall
+            h3.text-primary-semibold__dark.text-primary-semibold__dark--piece--homepage= piece
+
+                span.text-primary-semibold__dark--note= spanText
+            a.btn-small(href=href target='_blank') See more
+mixin news-card-dark(newsDate)
+    .flex-card.flex-card__wide.flex-card__wide--dark
+        .news-date
+            .news-date__text 
+                h4.news-date__text= newsDate
+        .news-content
+            block
+mixin news-card-light(newsDate)
+    .flex-card.flex-card__wide.flex-card__wide--light
+        .news-date
+            .news-date__text 
+                h4.news-date__text= newsDate
+        .news-content
+            block
+
+mixin cd-homepage(mobileImage, mobileImageAltText, cdImageBack, cdImageBackAlt, cdImageFront, cdImageFrontAlt, cdTitle, cdSubtitle, performers, city, buyLink)
+    .cd-card.cd-card--homepage
+        .cd-image-mobile
+            img#myImg.full-screen-image--img(src= mobileImage alt= mobileImageAltText)
+
+            #myImg-myModal.full-screen-image-modal
+                span.full-screen-image-close &times;
+                img#myImg-modal.full-screen-image-modal-content
+        .cd-image__container
+            img.cd-image__back.cd-image__back--homepage(src= cdImageBack alt= cdImageBackAlt)
+            img.cd-image__front.cd-image__front--homepage(src= cdImageFront alt= cdImageFrontAlt)
+        .cd-card__content
+            h4.cd-title.cd-title--homepage= cdTitle 
+            h3.cd-subtitle.cd-subtitle--homepage= cdSubtitle
+
+            each performer in performers
+                p.cd-performers.cd-performers--homepage= performer
+            .cd-btn-container
+                p.cd-city.cd-city--homepage= city
+                a.btn-medium-gold.text-right(href= buyLink target='_blank') Get on Amazon.de
