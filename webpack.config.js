@@ -1,6 +1,17 @@
-module.exports = {
+
+// webpack.config.js
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const pug = {
+  test: /\.pug$/,
+  use: ['html-loader', 'pug-html-loader']
+};
+
+
+const config = {
     entry: './app.js',
-    mode: 'production',
+    // mode: 'production',
     output: {
       path: `${__dirname}/dist`,
       filename: 'bundle.js',
@@ -8,6 +19,7 @@ module.exports = {
 
     module: {
         rules: [
+          pug,
           {
             test: /\.css$/,
             use: [
@@ -29,4 +41,15 @@ module.exports = {
           },
         ],
       },
-  };
+      plugins: [
+        new HtmlWebpackPlugin({
+          filename: 'html-from-pug/index.html',
+          template: 'pug-src/index.pug',
+          inject: false
+        })
+     ]
+
+    }
+  
+
+  module.exports = config;
