@@ -1,1 +1,19 @@
 extends base.pug
+include ./mixins/_mixins.pug
+
+block content
+    #concerts.background--dark
+        include ./includes/_nav-general.pug
+        img.full-width(src='/../img/sophie-cover-pictures/pages-medium-minified.jpg' alt='Sophie gives master-class')
+        .container__content--page-concerts
+            h2.section-header.section-header--page-upcoming-concerts UPCOMING CONCERTS
+            +upcoming-concert--concerts-page('18 Februar', '', '19:00', "München", "Bayerische Staatsoper", 'Carmen | Gastsolobass','', "https://www.staatsoper.de/")
+            +upcoming-concert--concerts-page('1 März', '', '20:00', "München", "Staatstheater am Gärtnerplatz", 'Rigoletto | Solobass', ' (premiere)', "https://www.staatsoper.de/")
+            +upcoming-concert--concerts-page('18 Februar', '', '19:00', "München", "Bayerische Staatsoper", 'Carmen | Gastsolobass','', "https://www.staatsoper.de/")
+            h3#past-concerts.section-header__past-concerts PAST CONCERTS
+            +upcoming-concert--concerts-page('18 Februar', 'event-container--past', '19:00', "München", "Bayerische Staatsoper", 'Carmen | Gastsolobass','', "https://www.staatsoper.de/")
+            +upcoming-concert--concerts-page('1 März', 'event-container--past', '20:00', "München", "Staatstheater am Gärtnerplatz", 'Rigoletto | Solobass', ' (premiere)', "https://www.staatsoper.de/")
+            +upcoming-concert--concerts-page('18 Februar', 'event-container--past', '19:00', "München", "Bayerische Staatsoper", 'Carmen | Gastsolobass','', "https://www.staatsoper.de/")
+        include includes/_footer.pug
+        include includes/_contact-us-modal.pug
+        

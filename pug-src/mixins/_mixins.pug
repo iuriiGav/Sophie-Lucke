@@ -11,15 +11,24 @@ mixin upcoming-concert(date, time, city, concertHall, piece, spanText, href)
 
                 span.text-primary-semibold__dark--note= spanText
             a.btn-small(href=href target='_blank') See more
-mixin news-card-dark(newsDate)
-    .flex-card.flex-card__wide.flex-card__wide--dark
-        .news-date
-            .news-date__text 
-                h4.news-date__text= newsDate
-        .news-content
-            block
-mixin news-card-light(newsDate)
-    .flex-card.flex-card__wide.flex-card__wide--light
+
+mixin upcoming-concert--concerts-page(date, past, time, city, concertHall, piece, spanText, href)
+    .event-container.event-container--concerts-page(class=past)
+        .event-date-container
+            p.text-primary-semibold__dark.text-primary-semibold__dark--small= date
+            p.text-primary-semibold__dark.text-primary-semibold__dark--medium= time
+            p.text-primary-semibold__dark.text-primary-semibold__dark--small.text-primary-semibold__dark--no-border= city
+
+        .event-description-container
+            h4.text-primary-semibold__dark.text-primary-semibold__dark--concerthall= concertHall
+            h3.text-primary-semibold__dark.text-primary-semibold__dark--piece--homepage= piece
+
+                span.text-primary-semibold__dark--note= spanText
+            a.btn-small(href=href target='_blank') See more
+
+
+mixin news-card(newsDate, color)
+    .flex-card.flex-card__wide(class=color)
         .news-date
             .news-date__text 
                 h4.news-date__text= newsDate
@@ -46,3 +55,16 @@ mixin cd-homepage(mobileImage, mobileImageAltText, cdImageBack, cdImageBackAlt, 
             .cd-btn-container
                 p.cd-city.cd-city--homepage= city
                 a.btn-medium-gold.text-right(href= buyLink target='_blank') Get on Amazon.de
+
+mixin audio-upload(heading, artists, srcMp3, srcOgg)
+    .audio-record__container.audio-record__container--margin-bottom
+        .audio-record__text-container
+            h3.audio-record__heading= heading 
+            .audio-record__artists-container
+                each artist in artists
+                    p.audio-record__artist-name= artist
+        audio#linkAudio.audio-record__audio-player(controls='')
+                
+            source(src= srcMp3 type='audio/mpeg')
+            source(src= srcOgg type='audio/ogg')
+            |Your browser does not support the audio element.

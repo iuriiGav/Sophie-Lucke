@@ -374,6 +374,14 @@ a, a:active, a:focus {
 .footer--galery {
   grid-column: col-start 1 / col-end -1; }
 
+.watch-and-listen__cd--top-mobile {
+  display: none; }
+  @media only screen and (max-width: 970px) {
+    .watch-and-listen__cd--top-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
+
 .watch-and-listen__cd--top-mobile--img:hover {
   opacity: 0.7; }
 

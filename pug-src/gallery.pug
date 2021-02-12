@@ -1,0 +1,22 @@
+extends base.pug
+include ./mixins/_mixins.pug
+
+block content
+    #bio.background--dark
+        include ./includes/_nav-general.pug
+        img.full-width(src='/../img/sophie-cover-pictures/pages-medium-minified.jpg' alt='Sophie gives master-class')
+        // ALTERNATIVE SLIDER GALLERY
+        .statick-event-listener
+            .alternative-gallery-placeholder
+        .galery.galery--full
+            h2.section-header.section-header--light-gray GALLERY
+            .galery__container
+                .galery-image--1.image-focus-grow
+                .galery-image--2.image-focus-grow
+                .galery-image--3.image-focus-grow
+                .galery-image--4.image-focus-grow
+                .galery__btn-container
+                    a.btn-large-gold(href='#') DOWNLOAD ALL PHOTOS
+            include includes/_footer.pug
+            include includes/_contact-us-modal.pug
+            

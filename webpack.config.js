@@ -45,13 +45,14 @@ const config = {
         new HtmlWebpackPlugin({
           filename: 'test-pug/index.html',
           template: 'pug-src/index.pug',
-          inject: false
+          inject: false,
         }),
         new HtmlWebpackPlugin({
           filename: 'test-pug/index.html',
           template: 'pug-src/index.pug',
           inject: false
         }),
+    
      ]
 
     }

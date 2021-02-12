@@ -1,0 +1,18 @@
+extends base
+block content
+    #bio.background--dark
+        include includes/_nav-general.pug
+        img.full-width(src='/../img/sophie-cover-pictures/pages-medium-minified.jpg' alt='Sophie gives master-class')
+        .flex-container__cenctered.flex-container__cenctered--column.position-relative
+            h2.section-header.section-header--light.mb-5 BIOGRAPHY
+            .bio-page-btns-container
+                a.biography-choose-lang-btn.bio__content__lang-btns-container--btn-de.biography-choose-lang-btn--active(href='') German
+                a.biography-choose-lang-btn.bio__content__lang-btns-container--btn-en.biography-choose-lang-btn--not-active(href='') English
+        .box-container-lg__centered.box-container-lg__centered--bio-page.text-secondary-thin
+            p.bio__content--GERMAN 
+                include biography-page-components/biography-de-text.pug
+
+            p.bio__content--ENGLISH.hidden
+                include biography-page-components/biography-en-text.pug
+        include includes/_footer.pug
+        include includes/_contact-us-modal.pug

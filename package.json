@@ -12,7 +12,7 @@
     "webpack:build": "webpack",
     "deploy": "gh-pages -d Sophie-Lucke",
     "build:local": "npm run prefix:css && npm run webpack:build && npm run copyfiles",
-    "watch:pug": "pug -w ./pug-src/index.pug -o ./test-pug -P"
+    "watch:pug": "pug -w ./pug-src/index.pug ./pug-src/concerts.pug ./pug-src/biography.pug ./pug-src/news.pug ./pug-src/listen.pug ./pug-src/gallery.pug -o ./test-pug -P"
   },
   "browserslist": "last 10 versions",
   "author": "",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
+    "html-beautify-webpack-plugin": "^1.0.5",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^5.0.0",
     "node-sass": "^5.0.0",

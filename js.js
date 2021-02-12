@@ -152,14 +152,14 @@ const swiperGallery = `<div id="swiper-gallery-full-screen" class="swiper-modal"
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide"><img src="img/galery/IMG_3546-minified.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/galery/42A0934-minified.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/galery/14700745_10208929141558352_1767394398515383186_o-minified.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/galery/14344227_1278549945502120_5390873153939167157_n-minified.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/galery/14344171_1278549982168783_6020645592251789313_n-minified.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/IMG_8561-minified.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/IMG_8562-minified.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/sophie-cover-pictures/sophie-tall-crpoped-minified.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="../img/galery/IMG_3546-minified.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="../img/galery/42A0934-minified.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="../img/galery/14700745_10208929141558352_1767394398515383186_o-minified.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="../img/galery/14344227_1278549945502120_5390873153939167157_n-minified.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="../img/galery/14344171_1278549982168783_6020645592251789313_n-minified.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="../img/IMG_8561-minified.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="../img/IMG_8562-minified.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="../img/sophie-cover-pictures/sophie-tall-crpoped-minified.jpg" alt=""></div>
     ...
   </div>
   <!-- If we need pagination -->
